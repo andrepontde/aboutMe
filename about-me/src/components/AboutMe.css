@@ -1,0 +1,20 @@
+.about-me-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.about-me-container h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.about-me-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
