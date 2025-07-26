@@ -1,20 +1,261 @@
 .about-me-container {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
+  padding: 40px 20px;
+  font-family: 'Consolas', monospace;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
 }
 
-.about-me-container h2 {
-  font-size: 2rem;
-  color: #333;
+.about-intro {
   text-align: center;
+  margin-bottom: 60px;
 }
 
-.about-me-container p {
+.about-intro h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Disket Mono', monospace;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-content section {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: 'Disket Mono', monospace;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #5200ff, #c2fe0c);
+  border-radius: 2px;
+}
+
+.about-content p {
+  color: #666;
+  margin-bottom: 20px;
   font-size: 1rem;
-  color: #555;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-category {
+  background: #f8f9ff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e0e6ff;
+}
+
+.skill-category h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Disket Mono', monospace;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: white;
+  color: #666;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.skill-tag.primary {
+  background: #5200ff;
+  color: white;
+  border-color: #5200ff;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Approach Section */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.approach-item {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.approach-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.approach-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.approach-item h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 12px;
+  font-family: 'Disket Mono', monospace;
+}
+
+.approach-item p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
   line-height: 1.6;
+}
+
+/* Journey Section */
+.journey-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white;
+}
+
+.journey-section h3 {
+  color: white;
+}
+
+.journey-section h3::after {
+  background: white;
+}
+
+.journey-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Interests Section */
+.interests-section {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: white;
+}
+
+.interests-section h3 {
+  color: white;
+}
+
+.interests-section h3::after {
+  background: white;
+}
+
+.interests-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Goals Section */
+.goals-section {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+  color: white;
+}
+
+.goals-section h3 {
+  color: white;
+}
+
+.goals-section h3::after {
+  background: white;
+}
+
+.goals-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me-container {
+    padding: 20px 15px;
+  }
+  
+  .about-intro h2 {
+    font-size: 2.2rem;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+  }
+  
+  .about-content section {
+    padding: 25px 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .approach-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .about-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 20px;
+  }
+  
+  .approach-item {
+    padding: 20px;
+  }
 }
