@@ -30,90 +30,214 @@ function Projects() {
     },
     {
       id: 2,
-      title: "AI-Powered Backend API",
-      description: "RESTful API built with Express.js integrating TensorFlow for machine learning predictions. Features authentication, data validation, and comprehensive error handling.",
-      longDescription: "A scalable backend solution demonstrating proficiency in Node.js ecosystem, machine learning integration, and API design best practices.",
-      technologies: ["Node.js", "Express.js", "TensorFlow.js", "MongoDB", "JWT", "Docker"],
-      category: "Backend Development",
-      status: "In Development",
+      title: "SentiMetrics - AI Sentiment Analysis Platform",
+      description: "Hackathon-winning social media sentiment analysis platform built for HackIreland. Uses AI to analyze public sentiment across Twitter and Bluesky for stock trading insights and event analysis.",
+      longDescription: "A comprehensive platform that aggregates social media data and provides AI-powered sentiment analysis with actionable recommendations. Built during HackIreland hackathon, featuring real-time data processing and conversational AI interface.",
+      technologies: ["Next.js", "TypeScript", "Flask", "Python", "OpenAI GPT-3.5", "VADER Sentiment", "Twitter API", "Bluesky API"],
+      category: "Full Stack Development",
+      status: "Completed",
       featured: true,
-      githubUrl: "https://github.com/yourusername/ai-backend-api",
+      githubUrl: "https://github.com/andrepontde/Language-Style-Auto-Matching",
       liveUrl: null,
       imageUrl: null,
       challenges: [
-        "Integrating TensorFlow with Node.js efficiently",
-        "Implementing secure authentication system",
-        "Optimizing API response times"
+        "Integrating multiple social media APIs in real-time",
+        "Implementing advanced sentiment analysis algorithms",
+        "Building conversational AI interface with OpenAI"
       ],
       learnings: [
-        "Machine learning model deployment",
-        "API security best practices",
-        "Database optimization techniques"
+        "Multi-platform API integration",
+        "AI/ML model implementation",
+        "Real-time data processing"
       ],
-      dateCompleted: "2025-01",
-      duration: "3 weeks"
+      dateCompleted: "2024-11",
+      duration: "2 days (Hackathon)"
     },
     {
       id: 3,
-      title: "Java Desktop Application",
-      description: "Cross-platform desktop application built with Java Swing for data management and visualization. Features include file I/O, data processing, and interactive charts.",
-      longDescription: "Demonstrates object-oriented programming principles, design patterns, and GUI development skills in Java.",
-      technologies: ["Java", "Swing", "SQLite", "JUnit", "Maven"],
-      category: "Desktop Development",
+      title: "HouseHub - House Management Platform",
+      description: "Comprehensive full-stack house management application addressing Ireland's housing crisis. Features real-time chat, task management, bill splitting, and multi-user authentication for shared accommodations.",
+      longDescription: "Enterprise-level platform designed for shared housing management with JWT authentication, Socket.IO real-time communication, and comprehensive organizational tools. Includes role-based access control for landlords and tenants.",
+      technologies: ["Node.js", "React", "MongoDB", "Socket.IO", "JWT", "Express.js", "Irish Eircode API"],
+      category: "Full Stack Development",
       status: "Completed",
-      featured: false,
-      githubUrl: "https://github.com/yourusername/java-desktop-app",
+      featured: true,
+      githubUrl: "https://github.com/yourusername/househub",
       liveUrl: null,
       imageUrl: null,
       challenges: [
-        "Creating responsive UI with Swing",
-        "Efficient data handling and persistence",
-        "Cross-platform compatibility"
+        "Implementing real-time chat with Socket.IO",
+        "Building complex multi-user authentication system",
+        "Managing state across multiple house environments"
       ],
       learnings: [
-        "Advanced Java GUI programming",
-        "Database integration patterns",
-        "Software testing methodologies"
+        "Real-time application architecture",
+        "Role-based access control implementation",
+        "Complex state management in React"
       ],
       dateCompleted: "2024-12",
-      duration: "4 weeks"
+      duration: "6 weeks"
     },
     {
       id: 4,
-      title: "Python Data Analysis Tool",
-      description: "Python-based tool for processing and analyzing large datasets with pandas and numpy. Includes data visualization with matplotlib and statistical analysis features.",
-      longDescription: "Showcases data science skills and Python proficiency for handling real-world data processing challenges.",
-      technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter"],
-      category: "Data Science",
+      title: "Blood Test Scheduler - Data Structures Implementation",
+      description: "Java desktop application demonstrating comprehensive implementation of data structures and algorithms. Features patient management with priority queuing, recursive algorithms, and GUI interface using Java Swing.",
+      longDescription: "Educational project showcasing custom implementations of linked lists, priority queues, and stacks. Includes medical priority system, file serialization, and recursive programming techniques for healthcare appointment scheduling.",
+      technologies: ["Java SE 8+", "Java Swing", "NetBeans", "Object Serialization", "Custom Data Structures"],
+      category: "Desktop Development",
       status: "Completed",
       featured: false,
-      githubUrl: "https://github.com/yourusername/python-data-tool",
+      githubUrl: "https://github.com/yourusername/blood-scheduler",
       liveUrl: null,
       imageUrl: null,
       challenges: [
-        "Processing large datasets efficiently",
-        "Creating meaningful visualizations",
-        "Implementing statistical algorithms"
+        "Implementing custom data structures from scratch",
+        "Building efficient priority-based scheduling algorithm",
+        "Creating intuitive GUI with Java Swing"
       ],
       learnings: [
-        "Advanced pandas operations",
-        "Data visualization best practices",
-        "Statistical analysis techniques"
+        "Advanced data structures implementation",
+        "Algorithm design and optimization",
+        "Desktop application development with Java"
       ],
-      dateCompleted: "2024-11",
-      duration: "2 weeks"
+      dateCompleted: "2024-10",
+      duration: "4 weeks"
+    },
+    {
+      id: 5,
+      title: "CS50 AI - Harvard Artificial Intelligence Course",
+      description: "Complete implementation of Harvard's CS50 Introduction to Artificial Intelligence course. Comprehensive 6-week journey covering search algorithms, knowledge systems, machine learning, neural networks, and NLP through 10+ hands-on projects.",
+      longDescription: "Intensive AI program covering the full spectrum of artificial intelligence techniques. Implemented search algorithms (BFS, DFS, A*), adversarial AI with minimax, knowledge-based systems with propositional logic, probabilistic models, reinforcement learning, CNNs for computer vision, and NLP with attention mechanisms. Each week featured practical projects applying theoretical concepts to real-world problems.",
+      technologies: ["Python", "TensorFlow", "Keras", "scikit-learn", "NumPy", "Pandas", "OpenCV", "NLTK", "Pygame"],
+      category: "Artificial Intelligence",
+      status: "Completed",
+      featured: false,
+      githubUrl: "https://github.com/yourusername/cs50-ai",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Implementing minimax with alpha-beta pruning for optimal game AI",
+        "Building Bayesian networks for genetic trait inheritance calculation",
+        "Creating CNNs for traffic sign classification with high accuracy",
+        "Developing reinforcement learning agents using Q-learning",
+        "Implementing attention mechanisms for sequence-to-sequence NLP models",
+        "Solving complex constraint satisfaction problems for crossword generation"
+      ],
+      learnings: [
+        "Advanced search algorithms: BFS, DFS, A* with heuristics",
+        "Adversarial AI: Minimax algorithm with alpha-beta pruning",
+        "Knowledge representation: Propositional logic and automated reasoning",
+        "Probabilistic AI: Bayesian networks, Markov models, PageRank algorithm",
+        "Machine learning: Supervised learning, decision trees, model evaluation",
+        "Reinforcement learning: Q-learning, policy optimization",
+        "Deep learning: CNNs, image classification, computer vision",
+        "Natural language processing: Context-free grammars, attention mechanisms",
+        "Optimization: Local search, constraint satisfaction, backtracking"
+      ],
+      dateCompleted: "2024-09",
+      duration: "8 weeks"
+    },
+    {
+      id: 6,
+      title: "Language Style Matching (LSM) Auto Matcher Bot",
+      description: "Advanced NLP tool that analyzes linguistic style and generates responses matching Language Style Matching characteristics. Developed in collaboration with Master in Applied Psychology researcher.",
+      longDescription: "Sophisticated three-stage processing system combining text analysis, OpenAI integration, and style matching to create psychologically-informed responses that mirror specific linguistic patterns for better communication rapport.",
+      technologies: ["Python", "OpenAI GPT-3.5/GPT-4", "Natural Language Processing", "NLTK", "Psychological Analysis"],
+      category: "Data Science",
+      status: "Completed",
+      featured: false,
+      githubUrl: "https://github.com/yourusername/lsm-matcher",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Implementing complex linguistic pattern analysis",
+        "Integrating psychological research with AI",
+        "Maintaining semantic meaning while matching style"
+      ],
+      learnings: [
+        "Advanced natural language processing",
+        "Psychology-informed AI development",
+        "Multi-stage text processing pipelines"
+      ],
+      dateCompleted: "2024-08",
+      duration: "3 weeks"
+    },
+    {
+      id: 7,
+      title: "OOP SDG - Renewable Energy Education Platform",
+      description: "Collaborative Java application addressing UN Sustainable Development Goal 7. Features interactive renewable energy game, comprehensive knowledge quiz, and carbon footprint calculator with educational dashboard.",
+      longDescription: "Team-developed educational platform demonstrating advanced OOP principles, design patterns (MVC, Factory, Observer), and clean code architecture. Combines environmental education with gamified learning experiences.",
+      technologies: ["Java SE 11+", "Java Swing", "NetBeans", "Design Patterns", "SOLID Principles"],
+      category: "Desktop Development",
+      status: "Completed",
+      featured: false,
+      githubUrl: "https://github.com/yourusername/oop-sdg",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Implementing multiple design patterns effectively",
+        "Collaborative development with team coordination",
+        "Creating engaging educational game mechanics"
+      ],
+      learnings: [
+        "Advanced object-oriented programming",
+        "Design pattern implementation",
+        "Team-based software development"
+      ],
+      dateCompleted: "2024-05",
+      duration: "8 weeks"
+    },
+    {
+      id: 8,
+      title: "Steadfast - AI Productivity Assistant",
+      description: "Work-in-progress AI-powered desktop assistant that dynamically adapts digital environments based on user behavior and context. Combines behavioral monitoring, journaling analysis, and AI automation to enhance productivity.",
+      longDescription: "Multi-component productivity system featuring a C# system agent for behavioral monitoring, Python FastAPI AI engine with GPT integration, Electron-based journaling app, and comprehensive dashboard. Uses machine learning to understand user intentions, reward focus, and reduce distractions in real-time.",
+      technologies: ["C#", ".NET 6+", "Python", "FastAPI", "Electron", "React", "GPT API", "SQLite", "NLP", "TailwindCSS"],
+      category: "Full Stack Development",
+      status: "In Development",
+      featured: false,
+      githubUrl: "https://github.com/yourusername/steadfast",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Building cross-platform system-level monitoring with C#",
+        "Integrating multiple technologies (C#, Python, Electron) seamlessly",
+        "Developing AI context awareness from user behavior patterns",
+        "Creating intelligent app blocking and reward systems",
+        "Implementing real-time behavioral analysis and scoring"
+      ],
+      learnings: [
+        "Advanced system-level programming with C#",
+        "Multi-service architecture design and communication",
+        "AI-driven behavioral analysis and pattern recognition",
+        "Desktop application development with Electron",
+        "Real-time data processing and automation systems"
+      ],
+      dateCompleted: "In Progress",
+      duration: "Ongoing"
     }
   ];
 
   const categories = [...new Set(projects.map(p => p.category))];
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [expandedProject, setExpandedProject] = useState(null);
+  const [modalProject, setModalProject] = useState(null);
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
     : projects.filter(p => p.category === selectedCategory);
 
   const featuredProjects = projects.filter(p => p.featured);
+
+  const openModal = (project) => {
+    setModalProject(project);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  const closeModal = () => {
+    setModalProject(null);
+    document.body.style.overflow = 'unset'; // Restore scrolling
+  };
 
   return (
     <div className="projects-container">
@@ -138,11 +262,11 @@ function Projects() {
               </div>
               <p className="project-description">{project.description}</p>
               <div className="tech-stack">
-                {project.technologies.slice(0, 4).map(tech => (
+                {project.technologies.slice(0, 3).map(tech => (
                   <span key={tech} className="tech-tag">{tech}</span>
                 ))}
-                {project.technologies.length > 4 && (
-                  <span className="tech-tag more">+{project.technologies.length - 4} more</span>
+                {project.technologies.length > 3 && (
+                  <span className="tech-tag more">+{project.technologies.length - 3} more</span>
                 )}
               </div>
               <div className="project-links">
@@ -158,9 +282,9 @@ function Projects() {
                 )}
                 <button 
                   className="project-link details"
-                  onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
+                  onClick={() => openModal(project)}
                 >
-                  {expandedProject === project.id ? 'Less Details' : 'More Details'}
+                  More Details
                 </button>
               </div>
             </div>
@@ -229,44 +353,95 @@ function Projects() {
                   )}
                   <button 
                     className="project-link details"
-                    onClick={() => setExpandedProject(expandedProject === project.id ? null : project.id)}
+                    onClick={() => openModal(project)}
                   >
-                    {expandedProject === project.id ? 'Less' : 'More'}
+                    More
                   </button>
                 </div>
               </div>
-
-              {/* Expanded Details */}
-              {expandedProject === project.id && (
-                <div className="project-details">
-                  <div className="detail-section">
-                    <h5>Project Overview</h5>
-                    <p>{project.longDescription}</p>
-                  </div>
-                  
-                  <div className="detail-section">
-                    <h5>Key Challenges</h5>
-                    <ul>
-                      {project.challenges.map((challenge, index) => (
-                        <li key={index}>{challenge}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="detail-section">
-                    <h5>What I Learned</h5>
-                    <ul>
-                      {project.learnings.map((learning, index) => (
-                        <li key={index}>{learning}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>
       </section>
+
+      {/* Project Modal */}
+      {modalProject && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <div className="modal-title-section">
+                <h2>{modalProject.title}</h2>
+                <span className={`status-badge ${modalProject.status.toLowerCase().replace(' ', '-')}`}>
+                  {modalProject.status}
+                </span>
+              </div>
+              <button className="modal-close" onClick={closeModal}>×</button>
+            </div>
+            
+            <div className="modal-body">
+              <div className="modal-section">
+                <h3>Project Overview</h3>
+                <p>{modalProject.longDescription}</p>
+              </div>
+
+              <div className="modal-section">
+                <h3>Technologies Used</h3>
+                <div className="modal-tech-stack">
+                  {modalProject.technologies.map(tech => (
+                    <span key={tech} className="modal-tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="modal-section">
+                <h3>Key Challenges</h3>
+                <ul className="modal-list">
+                  {modalProject.challenges.map((challenge, index) => (
+                    <li key={index}>{challenge}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="modal-section">
+                <h3>What I Learned</h3>
+                <ul className="modal-list">
+                  {modalProject.learnings.map((learning, index) => (
+                    <li key={index}>{learning}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="modal-section">
+                <h3>Project Details</h3>
+                <div className="modal-meta">
+                  <div className="modal-meta-item">
+                    <strong>Category:</strong> {modalProject.category}
+                  </div>
+                  <div className="modal-meta-item">
+                    <strong>Completed:</strong> {modalProject.dateCompleted}
+                  </div>
+                  <div className="modal-meta-item">
+                    <strong>Duration:</strong> {modalProject.duration}
+                  </div>
+                </div>
+              </div>
+
+              <div className="modal-actions">
+                {modalProject.githubUrl && (
+                  <a href={modalProject.githubUrl} target="_blank" rel="noopener noreferrer" className="modal-link github">
+                    View on GitHub
+                  </a>
+                )}
+                {modalProject.liveUrl && (
+                  <a href={modalProject.liveUrl} target="_blank" rel="noopener noreferrer" className="modal-link live">
+                    Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Call to Action */}
       <section className="cta-section">

@@ -1,5 +1,5 @@
 .projects-container {
-  padding: 40px 20px;
+  padding: 30px 20px;
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Consolas', monospace;
@@ -13,54 +13,54 @@
 
 .projects-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .projects-header h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-family: 'Disket Mono', monospace;
 }
 
 .projects-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #666;
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* Featured Projects */
 .featured-section {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .featured-section h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   text-align: center;
   font-family: 'Disket Mono', monospace;
 }
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
 }
 
 .featured-project-card {
   background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e0e6ff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e6ff;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-height: 300px;
+  min-height: 280px;
 }
 
 .featured-project-card::before {
@@ -69,28 +69,28 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, #5200ff, #c2fe0c);
 }
 
 .featured-project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* All Projects */
 .all-projects-section {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .filter-section {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .filter-section h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-align: center;
   font-family: 'Disket Mono', monospace;
 }
@@ -99,20 +99,20 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .category-filters button {
-  padding: 12px 24px;
-  border: 2px solid #e0e6ff;
+  padding: 8px 16px;
+  border: 1px solid #e0e6ff;
   background: white;
   color: #666;
-  border-radius: 25px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Consolas', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -129,30 +129,30 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
   align-items: start;
 }
 
 .project-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #e9ecef;
   transition: all 0.3s ease;
-  min-height: 400px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .project-main {
-  padding: 25px;
+  padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -163,12 +163,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 15px;
-  gap: 15px;
+  margin-bottom: 12px;
+  gap: 12px;
 }
 
 .project-header h4 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #333;
   margin: 0;
   font-family: 'Disket Mono', monospace;
@@ -205,44 +205,45 @@
 
 .project-description {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
 }
 
 .project-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
-  font-size: 0.85rem;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
 }
 
 .category-tag {
   background: #f8f9fa;
   color: #495057;
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
   border: 1px solid #dee2e6;
 }
 
 .date, .duration {
   color: #6c757d;
+  font-size: 0.75rem;
 }
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 25px;
+  gap: 6px;
+  margin-bottom: 18px;
 }
 
 .tech-tag {
   background: #e7f3ff;
   color: #0066cc;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid #b3d9ff;
 }
@@ -251,19 +252,20 @@
   background: #f8f9fa;
   color: #6c757d;
   border-color: #dee2e6;
+  font-size: 0.7rem;
 }
 
 .project-links {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .project-link {
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -300,12 +302,12 @@
 
 .project-details {
   background: #f8f9fa;
-  padding: 25px;
+  padding: 20px;
   border-top: 1px solid #e9ecef;
 }
 
 .detail-section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .detail-section:last-child {
@@ -313,67 +315,291 @@
 }
 
 .detail-section h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-family: 'Disket Mono', monospace;
 }
 
 .detail-section p {
   color: #666;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .detail-section ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .detail-section li {
   color: #666;
-  line-height: 1.6;
-  margin-bottom: 8px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
 }
 
 /* Call to Action */
 .cta-section {
   text-align: center;
-  padding: 60px 40px;
+  padding: 40px 30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
+  border-radius: 12px;
   color: white;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .cta-section h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
   font-family: 'Disket Mono', monospace;
 }
 
 .cta-section p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  font-size: 1rem;
+  margin-bottom: 25px;
   opacity: 0.9;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 15px 35px;
+  padding: 12px 28px;
   background: white;
   color: #667eea;
-  border-radius: 30px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 30px 0 30px;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.modal-title-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.modal-title-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-family: 'Disket Mono', monospace;
+  line-height: 1.2;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.modal-body {
+  padding: 0 30px 30px 30px;
+}
+
+.modal-section {
+  margin-bottom: 35px;
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Disket Mono', monospace;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.modal-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #5200ff, #c2fe0c);
+}
+
+.modal-section p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.modal-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-tech-tag {
+  background: linear-gradient(135deg, #e7f3ff, #cce7ff);
+  color: #0066cc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #b3d9ff;
+  transition: all 0.3s ease;
+}
+
+.modal-tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.modal-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.modal-list li {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.modal-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.modal-meta-item {
+  font-size: 0.95rem;
+}
+
+.modal-meta-item strong {
+  color: #333;
+  font-family: 'Disket Mono', monospace;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e9ecef;
+}
+
+.modal-link {
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: 'Consolas', monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-link.github {
+  background: #24292e;
+  color: white;
+}
+
+.modal-link.github:hover {
+  background: #1a1e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(36, 41, 46, 0.3);
+}
+
+.modal-link.live {
+  background: #28a745;
+  color: white;
+}
+
+.modal-link.live:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
 }
 
 /* Responsive Design */
@@ -431,5 +657,68 @@
 
   .project-card {
     min-height: auto;
+  }
+
+  /* Modal Responsive */
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .modal-title-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-body {
+    padding: 0 20px 20px 20px;
+  }
+
+  .modal-section {
+    margin-bottom: 25px;
+  }
+
+  .modal-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-tech-stack {
+    gap: 8px;
+  }
+
+  .modal-tech-tag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .modal-meta {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-link {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
   }
 }

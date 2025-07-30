@@ -12,62 +12,56 @@ function Home() {
           className="profile-image"
         />
         <div className="text-content">
-          <h1>Hello! I'm André Pont</h1>
+          <h1>André Pont De Anda</h1>
+          <p className="title">Software Developer & Computing Student</p>
           <p className="main-description">
-            I am a computing student with a passion for backend development and a keen interest in exploring the world of AI. As a developer, I can easily adapt to any tech stack and am always eager to learn new technologies. I have a strong foundation in programming languages such as Java, Python, and JavaScript, and I am proficient in using frameworks like Express.js for API development and TensorFlow for AI.
+            Full-stack developer specializing in backend systems and AI integration. 
+            Currently pursuing computing studies while building innovative solutions 
+            with modern technologies including Java, Python, React, and machine learning frameworks.
           </p>
-          <p className="secondary-description">If you would like to know more about me, feel free to explore the following sections:</p>
-          <ul className="navigation-links">
-            <li><Link to="/about-me">🙍🏻‍♂️ About Me</Link></li>
-            <li><Link to="/projects">💻 Projects</Link></li>
-            <li><Link to="/resume">📄 Resume</Link></li>
-            <li><a href="#contact">📧 Contact</a></li>
-          </ul>
           
           <div className="quick-stats">
             <div className="stat-item">
-              <span className="stat-number">4+</span>
-              <span className="stat-label">Projects Completed</span>
-            </div>
-            <div className="stat-item">
               <span className="stat-number">3+</span>
-              <span className="stat-label">Technologies Mastered</span>
+              <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">2+</span>
-              <span className="stat-label">Years Learning</span>
+              <span className="stat-number">10+</span>
+              <span className="stat-label">Technologies</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Learning Mode</span>
             </div>
           </div>
 
-          <div className="cta-section">
-            <Link to="/projects" className="cta-primary">View My Work</Link>
-            <a href="#contact" className="cta-secondary">Get In Touch</a>
-          </div>
+          <Link to="/projects" className="cta-primary">View Projects</Link>
+          <Link to="/resume" className="cta-secondary">Download Resume</Link>
         </div>
       </div>
 
       <div className="highlight-section">
-        <h2>What I Bring to the Table</h2>
+        <h2>Core Expertise</h2>
         <div className="highlights-grid">
           <div className="highlight-item">
-            <div className="highlight-icon">�</div>
-            <h3>Backend Excellence</h3>
-            <p>Specialized in building robust, scalable backend systems with Node.js, Express.js, and Java</p>
+            <div className="highlight-icon">⚙️</div>
+            <h3>Backend Development</h3>
+            <p>Java, Node.js, Express.js, Flask, RESTful APIs, and database integration</p>
           </div>
           <div className="highlight-item">
             <div className="highlight-icon">🤖</div>
-            <h3>AI Integration</h3>
-            <p>Experience with TensorFlow and machine learning model integration into web applications</p>
+            <h3>AI & Machine Learning</h3>
+            <p>Python, TensorFlow, OpenAI integration, sentiment analysis, and data processing</p>
           </div>
           <div className="highlight-item">
-            <div className="highlight-icon">⚡</div>
-            <h3>Quick Adaptation</h3>
-            <p>Proven ability to quickly learn and adapt to new technologies and development frameworks</p>
+            <div className="highlight-icon">⚛️</div>
+            <h3>Frontend Development</h3>
+            <p>React, responsive design, and modern JavaScript frameworks</p>
           </div>
           <div className="highlight-item">
             <div className="highlight-icon">🎯</div>
-            <h3>Problem Solver</h3>
-            <p>Strong analytical skills with a focus on creating efficient, maintainable solutions</p>
+            <h3>Problem Solving</h3>
+            <p>Strong analytical skills with proven ability to deliver innovative solutions and efficient code</p>
           </div>
         </div>
       </div>
