@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
@@ -100,10 +100,10 @@ function App() {
         <canvas id="game-of-life"></canvas>
         <header className="App-header">
           <nav>
-            <a href="/">Home</a>
-            <a href="/about-me">About Me</a>
-            <a href="/projects">Projects</a>
-            <a href="/resume">Resume</a>
+            <Link to="/">Home</Link>
+            <Link to="/about-me">About Me</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/resume">Resume</Link>
           </nav>
         </header>
         <main>
