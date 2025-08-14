@@ -1,14 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Projects.css';
 
 function Projects() {
+  const scrollRef = useRef(null);
+  
+  const scrollProjectsLeft = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth = container.querySelector('.project-card')?.offsetWidth || 0;
+      const gap = 20;
+      container.scrollBy({
+        left: -(cardWidth + gap), // Scroll by 1 card width to shift view
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollProjectsRight = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth = container.querySelector('.project-card')?.offsetWidth || 0;
+      const gap = 20;
+      container.scrollBy({
+        left: cardWidth + gap, // Scroll by 1 card width to shift view
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const projects = [
     {
       id: 1,
       title: "Personal Portfolio Website",
       description: "A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation. Showcases professional experience, projects, and skills with smooth navigation and interactive elements.",
       longDescription: "This project demonstrates advanced React concepts including hooks, routing, and canvas animations. The Game of Life implementation runs efficiently at 60fps with optimized rendering and responsive design considerations.",
-      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3", "React Router"],
+      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3"],
       category: "Frontend Development",
       status: "Live",
       featured: true,
@@ -218,16 +244,15 @@ function Projects() {
     }
   ];
 
-  const categories = [...new Set(projects.map(p => p.category))];
+  const categories = ['Featured', ...new Set(projects.map(p => p.category))];
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [expandedProject, setExpandedProject] = useState(null);
   const [modalProject, setModalProject] = useState(null);
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
+    : selectedCategory === 'Featured'
+    ? projects.filter(p => p.featured)
     : projects.filter(p => p.category === selectedCategory);
-
-  const featuredProjects = projects.filter(p => p.featured);
 
   const openModal = (project) => {
     setModalProject(project);
@@ -248,50 +273,6 @@ function Projects() {
         </p>
       </div>
 
-      {/* Featured Projects */}
-      <section className="featured-section">
-        <h3>Featured Projects</h3>
-        <div className="featured-grid">
-          {featuredProjects.map(project => (
-            <div key={project.id} className="featured-project-card">
-              <div className="project-header">
-                <h4>{project.title}</h4>
-                <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>
-                  {project.status}
-                </span>
-              </div>
-              <p className="project-description">{project.description}</p>
-              <div className="tech-stack">
-                {project.technologies.slice(0, 3).map(tech => (
-                  <span key={tech} className="tech-tag">{tech}</span>
-                ))}
-                {project.technologies.length > 3 && (
-                  <span className="tech-tag more">+{project.technologies.length - 3} more</span>
-                )}
-              </div>
-              <div className="project-links">
-                {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link github">
-                    <span>GitHub</span>
-                  </a>
-                )}
-                {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link live">
-                    <span>Live Demo</span>
-                  </a>
-                )}
-                <button 
-                  className="project-link details"
-                  onClick={() => openModal(project)}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Category Filter */}
       <section className="all-projects-section">
         <div className="filter-section">
@@ -309,14 +290,24 @@ function Projects() {
                 className={selectedCategory === category ? 'active' : ''}
                 onClick={() => setSelectedCategory(category)}
               >
-                {category} ({projects.filter(p => p.category === category).length})
+                {category} ({category === 'Featured' 
+                  ? projects.filter(p => p.featured).length 
+                  : projects.filter(p => p.category === category).length
+                })
               </button>
             ))}
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="projects-grid">
+        {/* Projects Container with Side Navigation */}
+        <div className="projects-container-wrapper">
+          <button className="projects-nav-button projects-nav-left" onClick={scrollProjectsLeft} aria-label="Previous projects">
+            <span className="nav-icon">{'<'}</span>
+            <span className="nav-label">prev()</span>
+          </button>
+
+          {/* Projects Grid */}
+          <div className="projects-grid" ref={scrollRef}>
           {filteredProjects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-main">
@@ -361,6 +352,12 @@ function Projects() {
               </div>
             </div>
           ))}
+          </div>
+
+          <button className="projects-nav-button projects-nav-right" onClick={scrollProjectsRight} aria-label="Next projects">
+            <span className="nav-icon">{'>'}</span>
+            <span className="nav-label">next()</span>
+          </button>
         </div>
       </section>
 
@@ -442,13 +439,6 @@ function Projects() {
           </div>
         </div>
       )}
-
-      {/* Call to Action */}
-      <section className="cta-section">
-        <h3>Interested in My Work?</h3>
-        <p>I'm always open to discussing new opportunities and collaborations.</p>
-        <a href="#contact" className="cta-button">Get In Touch</a>
-      </section>
     </div>
   );
 }
