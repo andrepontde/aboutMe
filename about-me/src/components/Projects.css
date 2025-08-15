@@ -309,12 +309,6 @@
   scroll-snap-align: start;
 }
 
-.project-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(0, 255, 136, 0.3);
-  transform: translateY(-2px);
-}
-
 .project-main {
   flex: 1;
 }

@@ -157,7 +157,8 @@ function App() {
                     <h1>André Pont De Anda</h1>
                     <p className="tagline">Full-Stack Developer & Computing Student</p>
                     <p className="description">
-                      Full-stack developer specializing in backend systems and AI integration. Currently pursuing computing studies while building innovative solutions with modern technologies including Java, Python, React, and machine learning frameworks.
+                      CS student motivated by a passion for technology and fear of unempployment.
+                      Retired procastinator and retail assistant @ <a href="https://www.rains.com">RAINS Dublin</a>
                     </p>
                     <div className="quick-info">
                       <span>📍 Dublin, Ireland</span>
@@ -218,7 +219,6 @@ function App() {
 
             {/* About Section */}
             <section id="about" className="content-section">
-              <h2>About Me</h2>
               <div className="horizontal-scroll">
                 <AboutMe />
               </div>
@@ -226,17 +226,17 @@ function App() {
 
             {/* Main Content */}
             <main className="main-content">
+              
               {/* Skills Section */}
               <section id="skills" className="content-section">
-                <h2>Skills & Technologies</h2>
                 <div className="horizontal-scroll">
                   <Skills />
                 </div>
               </section>
 
+            
               {/* Projects Section */}
               <section id="projects" className="content-section">
-                <h2>Featured Projects</h2>
                 <div className="horizontal-scroll">
                   <Projects />
                 </div>
@@ -244,7 +244,6 @@ function App() {
 
               {/* Experience Section */}
               <section id="experience" className="content-section">
-                <h2>Experience</h2>
                 <div className="horizontal-scroll">
                   <Experience />
                 </div>

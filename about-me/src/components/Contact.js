@@ -37,8 +37,7 @@ function Contact() {
               <span className="command">cat contact.info</span>
             </div>
             <div className="terminal-output">
-              Ready to collaborate on innovative projects<br/>
-              Open to new opportunities and challenges
+              Ready to collaborate
             </div>
           </div>
         </div>
@@ -63,7 +62,7 @@ function Contact() {
             </div>
             <div className="method-content">
               <h3>LinkedIn</h3>
-              <p>Professional Network</p>
+              
               <span className="method-action">Connect →</span>
             </div>
             <div className="card-hover-effect"></div>
@@ -75,7 +74,7 @@ function Contact() {
             </div>
             <div className="method-content">
               <h3>GitHub</h3>
-              <p>Code Repository</p>
+              
               <span className="method-action">View Code →</span>
             </div>
             <div className="card-hover-effect"></div>
@@ -87,23 +86,11 @@ function Contact() {
             </div>
             <div className="method-content">
               <h3>Resume</h3>
-              <p>Download CV</p>
+              
               <a href="/path-to-your-resume.pdf" download className="method-action">Download →</a>
             </div>
             <div className="card-hover-effect"></div>
           </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="contact-cta">
-        <div className="cta-content">
-          <h3>Ready to Start a Project?</h3>
-          <p>Whether it's a full-stack application, AI integration, or innovative solution - I'm here to help bring your ideas to life.</p>
-          <button className="primary-cta-button" onClick={() => window.open('mailto:andrepontde@gmail.com', '_blank')}>
-            <span className="button-text">Let's Collaborate</span>
-            <span className="button-icon">🚀</span>
-          </button>
         </div>
       </div>
     </div>

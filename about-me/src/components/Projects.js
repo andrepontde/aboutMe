@@ -57,7 +57,7 @@ function Projects() {
     {
       id: 2,
       title: "SentiMetrics - AI Sentiment Analysis Platform",
-      description: "Hackathon-winning social media sentiment analysis platform built for HackIreland. Uses AI to analyze public sentiment across Twitter and Bluesky for stock trading insights and event analysis.",
+      description: "Social media sentiment analysis platform built for HackIreland. Uses AI to analyze public sentiment across Twitter and Bluesky for stock trading insights and event analysis.",
       longDescription: "A comprehensive platform that aggregates social media data and provides AI-powered sentiment analysis with actionable recommendations. Built during HackIreland hackathon, featuring real-time data processing and conversational AI interface.",
       technologies: ["Next.js", "TypeScript", "Flask", "Python", "OpenAI GPT-3.5", "VADER Sentiment", "Twitter API", "Bluesky API"],
       category: "Full Stack Development",
@@ -222,7 +222,7 @@ function Projects() {
       category: "Full Stack Development",
       status: "In Development",
       featured: false,
-      githubUrl: "https://github.com/yourusername/steadfast",
+      githubUrl: "https://github.com/andrepontde/Steadfast-Java-pilot.git",
       liveUrl: null,
       imageUrl: null,
       challenges: [
@@ -276,7 +276,7 @@ function Projects() {
       {/* Category Filter */}
       <section className="all-projects-section">
         <div className="filter-section">
-          <h3>All Projects</h3>
+          <h3>Featured Projects</h3>
           <div className="category-filters">
             <button 
               className={selectedCategory === 'All' ? 'active' : ''}
