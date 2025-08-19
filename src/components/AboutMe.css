@@ -46,7 +46,7 @@
   border: 2px solid #00ff88;
   color: #00ff88;
   padding: 15px 10px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   cursor: pointer;
   font-family: 'Disket Mono', 'Consolas', monospace;
   font-size: 14px;
@@ -140,7 +140,7 @@
   min-height: 400px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 18px;
   flex-shrink: 0;
   scroll-snap-align: start;
@@ -230,7 +230,7 @@
 .stats-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -271,7 +271,7 @@
 .location-info {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -310,7 +310,7 @@
 .methodology-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -349,7 +349,7 @@
 .tools-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -371,7 +371,7 @@
   background: rgba(0, 255, 136, 0.1);
   color: #00ff88;
   padding: 3px 6px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   font-size: 0.65rem;
   border: 1px solid rgba(0, 255, 136, 0.3);
   text-align: center;
@@ -382,7 +382,7 @@
 .interests-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -435,7 +435,7 @@
 .hardware-specs {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -477,7 +477,7 @@
 .goals-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -515,7 +515,7 @@
 .availability-container {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 12px;
 }
 
@@ -534,13 +534,13 @@
   margin-bottom: 10px;
   padding: 6px 8px;
   background: rgba(0, 255, 136, 0.1);
-  border-radius: 6px;
+  /* border-radius: 6px; */
 }
 
 .status-indicator {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background: #00ff88;
   box-shadow: 0 0 6px rgba(0, 255, 136, 0.5);
 }
@@ -601,7 +601,7 @@
   font-size: 0.75rem;
   padding: 4px 8px; /* Reduced from 5px 10px */
   background: rgba(0, 255, 136, 0.1);
-  border-radius: 12px;
+  /* border-radius: 12px; */
   border: 1px solid rgba(0, 255, 136, 0.3);
   text-align: center;
 }
@@ -618,7 +618,7 @@
   background: rgba(0, 255, 136, 0.1);
   color: #00ff88;
   padding: 2px 6px; /* Reduced from 3px 8px */
-  border-radius: 12px;
+  /* border-radius: 12px; */
   font-size: 0.7rem;
   border: 1px solid rgba(0, 255, 136, 0.3);
   white-space: nowrap;
@@ -644,7 +644,7 @@
   font-size: 0.75rem;
   padding: 5px 8px; /* Reduced from 6px 10px */
   background: rgba(255, 255, 255, 0.02);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border-left: 3px solid #00ff88;
 }
 
@@ -671,7 +671,7 @@
   text-align: center;
   padding: 12px;
   background: rgba(255, 255, 255, 0.02);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   border: 1px solid rgba(255, 255, 255, 0.05);
   height: 100%;
   display: flex;
@@ -755,28 +755,28 @@
 
 @media (max-width: 768px) {
   .about-me-container {
-    padding: 10px;
+    padding: 15px;
   }
   
   .about-header {
-    margin-bottom: 8px;
-    padding: 0 5px;
+    margin-bottom: 15px;
+    padding: 0 10px;
   }
   
   .about-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
   .about-container-wrapper {
-    gap: 10px;
+    gap: 15px;
     flex-direction: column;
     padding: 0;
   }
   
   .about-grid {
     width: 100%;
-    padding: 0 15px;
-    gap: 15px;
+    padding: 0 20px;
+    gap: 20px;
     order: 1;
   }
   
@@ -790,79 +790,102 @@
   
   .about-nav-button {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     margin: 0 auto;
     flex-direction: row;
-    height: 50px;
-    gap: 10px;
+    height: 55px;
+    gap: 12px;
+    padding: 15px 20px;
+    min-height: 44px;
   }
   
   .nav-icon {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .nav-label {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .about-card {
-    min-width: calc(100vw - 60px);
-    max-width: calc(100vw - 60px);
-    min-height: 350px;
-    padding: 20px;
+    min-width: calc(100vw - 80px);
+    max-width: calc(100vw - 80px);
+    min-height: 400px;
+    padding: 25px;
   }
 
   .about-card-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .card-icon {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .about-card-content-two-column {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
   }
 
   .about-left-column p,
   .about-right-column p {
-    color: #e8e8e8;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .highlight-info span {
-    font-size: 0.8rem;
-    padding: 5px 10px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
   }
 
   .tech-tag {
-    font-size: 0.75rem;
-    padding: 3px 8px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
   }
 
   .timeline-item {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-    color: #aaa;
+    font-size: 0.85rem;
+    padding: 8px 12px;
   }
 
   .philosophy-grid-left,
   .philosophy-grid-right {
-    gap: 8px;
+    gap: 12px;
   }
 
   .philosophy-item {
-    padding: 10px;
+    padding: 15px;
   }
 
   .philosophy-item h4 {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .philosophy-item p {
-    font-size: 0.75rem;
-    color: #d5d5d5;
+    font-size: 0.8rem;
+  }
+  
+  .stats-container,
+  .location-info,
+  .methodology-container,
+  .tools-container,
+  .interests-container,
+  .hardware-specs,
+  .goals-container,
+  .availability-container {
+    padding: 15px;
+  }
+  
+  .stat-label,
+  .spec-label,
+  .avail-label {
+    font-size: 0.8rem;
+  }
+  
+  .stat-value,
+  .spec-value,
+  .avail-value {
+    font-size: 0.85rem;
   }
 }
 

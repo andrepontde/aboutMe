@@ -138,18 +138,17 @@ function Skills() {
         {/* IDE Title Bar */}
         <div className="ide-title-bar">
           <div className="title-bar-left">
-            <div className="window-controls">
-              <span className="control-btn close"></span>
-              <span className="control-btn minimize"></span>
-              <span className="control-btn maximize"></span>
-            </div>
             <span className="app-title">André's Tech Stack - Visual Studio Code</span>
           </div>
           <div className="title-bar-center">
             <span className="file-path">~/skills - André Pont De Anda</span>
           </div>
           <div className="title-bar-right">
-            <span className="version-info">Version 1.0.0</span>
+            <div className="window-controls">
+              <span className="control-btn minimize">−</span>
+              <span className="control-btn maximize">□</span>
+              <span className="control-btn close">×</span>
+            </div>
           </div>
         </div>
 

@@ -5,12 +5,18 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+import { trackPageView, trackPortfolioEvent } from './utils/analytics';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('about');
   const [displayText, setDisplayText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
   const [showContent, setShowContent] = useState(false);
+
+  // Track initial page view
+  useEffect(() => {
+    trackPageView(window.location.pathname);
+  }, []);
 
   useEffect(() => {
     const terminalLines = [
@@ -22,7 +28,7 @@ function App() {
       'drwxr-xr-x 12 andre andre 4096 Aug 14 2025 ..',
       '-rw-r--r--  1 andre andre 2048 Aug 14 2025 README.md',
       'andre@portfolio:~$ cat README.md',
-      ''
+      ';)'
     ];
 
     let timeoutId;
@@ -45,6 +51,9 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setCurrentSection(sectionId);
+    
+    // Track section views
+    trackPortfolioEvent.sectionView(sectionId);
   };
 
   useEffect(() => {
@@ -154,11 +163,11 @@ function App() {
               <div className="welcome-content">
                 <div className="content-layout">
                   <div className="text-content">
-                    <h1>André Pont De Anda</h1>
+                    <h1>André Pont</h1>
                     <p className="tagline">Full-Stack Developer & Computing Student</p>
                     <p className="description">
                       CS student motivated by a passion for technology and fear of unempployment.
-                      Retired procastinator and retail assistant @ <a href="https://www.rains.com">RAINS Dublin</a>
+                      Retired procastinator and retail assistant @ <a href="https://www.rains.com" className="company-link" target="_blank" rel="noopener noreferrer">RAINS Dublin</a>
                     </p>
                     <div className="quick-info">
                       <span>📍 Dublin, Ireland</span>
@@ -208,7 +217,6 @@ function App() {
               >
                 Experience
               </button>
-
               <button 
                 className={currentSection === 'contact' ? 'active' : ''} 
                 onClick={() => scrollToSection('contact')}
@@ -248,8 +256,6 @@ function App() {
                   <Experience />
                 </div>
               </section>
-
-
 
               {/* Contact Section */}
               <section id="contact" className="content-section">

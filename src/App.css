@@ -12,6 +12,10 @@
 
 * {
   box-sizing: border-box;
+  /* Prevent tap highlighting on mobile */
+  -webkit-tap-highlight-color: transparent;
+  /* Improve touch scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -21,6 +25,12 @@ body {
   background-color: #0a0a0a;
   color: #e0e0e0;
   font-family: 'Disket Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  /* Prevent iOS zoom on focus */
+  -webkit-text-size-adjust: 100%;
+  /* Improve mobile font rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 canvas {
@@ -124,6 +134,27 @@ canvas {
   color: #c0c0c0;
   line-height: 1.6;
   margin: 25px 0;
+}
+
+.company-link {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.company-link:hover {
+  color: #ffffff;
+  border-bottom-color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+.company-link:focus {
+  outline: 2px solid #00ff88;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .quick-info {
@@ -262,10 +293,17 @@ canvas {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .main-header {
+    padding: 30px 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
   .content-layout {
     flex-direction: column;
     gap: 30px;
     text-align: center;
+    padding: 0 15px;
   }
   
   .text-content {
@@ -273,20 +311,22 @@ canvas {
   }
   
   .text-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
   
   .tagline {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
   }
   
   .profile-image {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
   }
   
   .quick-info {
@@ -297,67 +337,121 @@ canvas {
   }
   
   .quick-info span {
-    padding: 6px 12px;
+    padding: 8px 15px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
   
   .main-nav {
     gap: 12px;
-    padding: 10px 15px;
+    padding: 12px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .main-nav button {
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 10px 18px;
+    font-size: 14px;
+    min-height: 44px;
+    border-radius: 25px;
+  }
+  
+  .content-section {
+    padding: 50px 20px;
   }
   
   .content-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
+  .terminal-startup {
+    font-size: 11px;
+    padding: 20px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 480px) {
+  .main-header {
+    padding: 20px 10px;
+    min-height: 100vh;
+  }
+  
   .content-layout {
-    gap: 20px;
+    gap: 25px;
+    padding: 0 10px;
   }
   
   .text-content h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .profile-image {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
   
   .content-section {
-    min-height: auto;
-    padding: 30px 15px;
+    padding: 40px 15px;
   }
   
   .quick-info {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
   }
   
   .quick-info span {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    min-height: 44px;
+    justify-content: center;
   }
   
   .main-nav {
+    gap: 8px;
+    padding: 10px;
     flex-direction: row;
     justify-content: center;
-    gap: 8px;
-    padding: 8px 10px;
   }
   
   .main-nav button {
-    padding: 5px 10px;
-    font-size: 11px;
+    padding: 8px 12px;
+    font-size: 12px;
+    min-height: 40px;
+    flex: 1;
+    max-width: 120px;
+  }
+  
+  .content-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+  
+  .terminal-startup {
+    font-size: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+    max-width: 100%;
   }
 }
 
@@ -391,4 +485,37 @@ canvas {
 html {
   scrollbar-width: thin;
   scrollbar-color: #00ff88 #0a0a0a;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button, a, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent accidental zooming */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Improve scrolling performance */
+  .horizontal-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Orientation change handling */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .main-header {
+    height: auto;
+    min-height: 70vh;
+    padding: 20px 15px;
+  }
+  
+  .content-section {
+    padding: 30px 20px;
+  }
 }

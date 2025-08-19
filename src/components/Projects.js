@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Projects.css';
+import { trackPortfolioEvent } from '../utils/analytics';
 
 function Projects() {
   const scrollRef = useRef(null);
@@ -39,7 +40,7 @@ function Projects() {
       status: "Live",
       featured: true,
       githubUrl: "https://github.com/andrepontde/aboutMe",
-      liveUrl: "#", // Add your deployed URL here
+      liveUrl: null, // This is the current portfolio you're viewing
       imageUrl: null, // Add screenshot path when available
       challenges: [
         "Implementing smooth Conway's Game of Life animation",
@@ -51,8 +52,7 @@ function Projects() {
         "React performance optimization",
         "Modern CSS Grid and Flexbox layouts"
       ],
-      dateCompleted: "2025-01",
-      duration: "2 weeks"
+      duration: "3 months"
     },
     {
       id: 2,
@@ -76,7 +76,6 @@ function Projects() {
         "AI/ML model implementation",
         "Real-time data processing"
       ],
-      dateCompleted: "2024-11",
       duration: "2 days (Hackathon)"
     },
     {
@@ -101,8 +100,7 @@ function Projects() {
         "Role-based access control implementation",
         "Complex state management in React"
       ],
-      dateCompleted: "2024-12",
-      duration: "6 weeks"
+      duration: "3 months"
     },
     {
       id: 4,
@@ -126,8 +124,7 @@ function Projects() {
         "Algorithm design and optimization",
         "Desktop application development with Java"
       ],
-      dateCompleted: "2024-10",
-      duration: "4 weeks"
+      duration: "2 weeks"
     },
     {
       id: 5,
@@ -160,8 +157,7 @@ function Projects() {
         "Natural language processing: Context-free grammars, attention mechanisms",
         "Optimization: Local search, constraint satisfaction, backtracking"
       ],
-      dateCompleted: "2024-09",
-      duration: "8 weeks"
+      duration: "3 months"
     },
     {
       id: 6,
@@ -185,8 +181,7 @@ function Projects() {
         "Psychology-informed AI development",
         "Multi-stage text processing pipelines"
       ],
-      dateCompleted: "2024-08",
-      duration: "3 weeks"
+      duration: "2 months"
     },
     {
       id: 7,
@@ -210,8 +205,7 @@ function Projects() {
         "Design pattern implementation",
         "Team-based software development"
       ],
-      dateCompleted: "2024-05",
-      duration: "8 weeks"
+      duration: "3 months"
     },
     {
       id: 8,
@@ -239,8 +233,7 @@ function Projects() {
         "Desktop application development with Electron",
         "Real-time data processing and automation systems"
       ],
-      dateCompleted: "In Progress",
-      duration: "Ongoing"
+      duration: "Ongoing (1+ month)"
     }
   ];
 
@@ -321,7 +314,6 @@ function Projects() {
                 
                 <div className="project-meta">
                   <span className="category-tag">{project.category}</span>
-                  <span className="date">{project.dateCompleted}</span>
                   <span className="duration">{project.duration}</span>
                 </div>
 
@@ -333,18 +325,33 @@ function Projects() {
 
                 <div className="project-links">
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link github">
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link github"
+                      onClick={() => trackPortfolioEvent.externalLink(`GitHub - ${project.title}`)}
+                    >
                       GitHub
                     </a>
                   )}
                   {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link live">
+                    <a 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link live"
+                      onClick={() => trackPortfolioEvent.externalLink(`Live Demo - ${project.title}`)}
+                    >
                       Live Demo
                     </a>
                   )}
                   <button 
                     className="project-link details"
-                    onClick={() => openModal(project)}
+                    onClick={() => {
+                      openModal(project);
+                      trackPortfolioEvent.projectClick(project.title);
+                    }}
                   >
                     More
                   </button>
@@ -413,9 +420,6 @@ function Projects() {
                 <div className="modal-meta">
                   <div className="modal-meta-item">
                     <strong>Category:</strong> {modalProject.category}
-                  </div>
-                  <div className="modal-meta-item">
-                    <strong>Completed:</strong> {modalProject.dateCompleted}
                   </div>
                   <div className="modal-meta-item">
                     <strong>Duration:</strong> {modalProject.duration}

@@ -26,7 +26,7 @@
 .ide-container {
   background: #1e1e1e;
   border: 1px solid #333;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -54,28 +54,47 @@
   gap: 12px;
 }
 
+.title-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .window-controls {
   display: flex;
-  gap: 8px;
+  gap: 0;
 }
 
 .control-btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  width: 45px;
+  height: 30px;
+  border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #cccccc;
+  background: transparent;
+  transition: background-color 0.2s ease;
 }
 
-.control-btn.close {
-  background: #ff5f57;
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.control-btn.minimize {
-  background: #ffbd2e;
+.control-btn.close:hover {
+  background: #e81123;
+  color: white;
 }
 
-.control-btn.maximize {
-  background: #28ca42;
+.control-btn.minimize:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.control-btn.maximize:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .app-title {
@@ -83,19 +102,14 @@
   font-weight: 500;
 }
 
-.title-bar-center {
-  flex: 1;
-  text-align: center;
-}
-
 .file-path {
   color: #888;
   font-style: italic;
 }
 
-.title-bar-right {
-  color: #888;
-  font-size: 0.75rem;
+.title-bar-center {
+  flex: 1;
+  text-align: center;
 }
 
 /* File Tabs */
@@ -264,7 +278,7 @@
   color: #888;
   cursor: pointer;
   padding: 2px 6px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .terminal-tab.active {
@@ -292,7 +306,7 @@
 
 .terminal-content::-webkit-scrollbar-thumb {
   background: #333;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 .terminal-line {
@@ -334,12 +348,77 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .skills-container {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 120px);
+    min-height: 500px;
+  }
+  
+  .ide-container {
+    margin: 0;
+  }
+  
+  .ide-title-bar {
+    height: 35px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+  
+  .control-btn {
+    width: 40px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .window-controls {
+    gap: 0;
+  }
+  
+  .title-bar-left {
+    gap: 10px;
+  }
+  
+  .file-tab {
+    min-width: 130px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .editor-content {
+    font-size: 0.9rem;
+  }
+  
+  .line-number {
+    min-width: 30px;
+    padding: 0 6px 0 12px;
+    font-size: 0.8rem;
+  }
+  
+  .code-text {
+    padding: 0 12px 0 6px;
+  }
+  
+  .terminal-panel {
+    height: 130px;
+  }
+  
+  .terminal-content {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  
+  .terminal-header {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    height: calc(100vh - 100px);
     min-height: 450px;
   }
   
   .ide-container {
     margin: 0;
+    border-radius: 0;
   }
   
   .ide-title-bar {
@@ -349,20 +428,25 @@
   }
   
   .control-btn {
-    width: 10px;
-    height: 10px;
+    width: 35px;
+    height: 25px;
+    font-size: 12px;
   }
   
   .window-controls {
-    gap: 6px;
+    gap: 0;
   }
   
   .title-bar-left {
-    gap: 10px;
+    gap: 8px;
+  }
+  
+  .app-title {
+    font-size: 0.7rem;
   }
   
   .file-tab {
-    min-width: 120px;
+    min-width: 110px;
     padding: 6px 10px;
     font-size: 0.8rem;
   }
@@ -372,12 +456,13 @@
   }
   
   .line-number {
-    min-width: 30px;
-    padding: 0 6px 0 12px;
+    min-width: 28px;
+    padding: 0 5px 0 10px;
+    font-size: 0.75rem;
   }
   
   .code-text {
-    padding: 0 12px 0 6px;
+    padding: 0 10px 0 5px;
   }
   
   .terminal-panel {
@@ -388,72 +473,13 @@
     font-size: 0.8rem;
     padding: 6px 10px;
   }
-}
-
-@media (max-width: 480px) {
-  .skills-container {
-    height: calc(100vh - 120px);
-    min-height: 400px;
-  }
-  
-  .ide-container {
-    margin: 0;
-    border-radius: 4px;
-  }
-  
-  .ide-title-bar {
-    height: 28px;
-    padding: 0 8px;
-    font-size: 0.7rem;
-  }
-  
-  .control-btn {
-    width: 8px;
-    height: 8px;
-  }
-  
-  .window-controls {
-    gap: 4px;
-  }
-  
-  .title-bar-left {
-    gap: 8px;
-  }
-  
-  .app-title {
-    display: none; /* Hide on very small screens */
-  }
-  
-  .file-tab {
-    min-width: 100px;
-    padding: 4px 8px;
-    font-size: 0.75rem;
-  }
-  
-  .editor-content {
-    font-size: 0.8rem;
-  }
-  
-  .line-number {
-    min-width: 25px;
-    padding: 0 4px 0 8px;
-    font-size: 0.75rem;
-  }
-  
-  .code-text {
-    padding: 0 8px 0 4px;
-  }
-  
-  .terminal-panel {
-    height: 100px;
-  }
-  
-  .terminal-content {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-  }
   
   .terminal-output div {
     font-size: 0.75rem;
+  }
+  
+  .terminal-header {
+    padding: 5px 10px;
+    font-size: 0.7rem;
   }
 }

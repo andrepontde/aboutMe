@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# André Pont De Anda - Portfolio Website
+
+A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation.
+
+## Features
+
+- Interactive Conway's Game of Life background
+- Smooth scrolling navigation between sections
+- Responsive design for all device sizes
+- Google Analytics integration for visitor tracking
+- SEO optimized with proper meta tags
+
+## Analytics Setup
+
+This portfolio includes Google Analytics tracking. To enable it:
+
+1. See `ANALYTICS_SETUP.md` for detailed instructions
+2. Create a `.env` file with your Google Analytics Measurement ID
+3. Deploy your site and verify tracking works
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

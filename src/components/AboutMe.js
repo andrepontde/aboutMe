@@ -42,7 +42,7 @@ function AboutMe() {
 
         {/* About Grid */}
         <div className="about-grid" ref={scrollRef}>
-        /* Introduction Card */
+        {/* Introduction Card  */}
           <div className="about-card">
             <div className="about-card-header">
               <h3>Who am I</h3>
@@ -181,45 +181,6 @@ function AboutMe() {
             </div>
           </div>
         </div>
-          {/* Development Philosophy Card
-        <div className="about-card">
-          <div className="about-card-header">
-            <h3>Development Philosophy</h3>
-          </div>
-          <div className="about-card-content-two-column">
-            <div className="about-left-column">
-              <div className="philosophy-grid-left">
-                <div className="philosophy-item">
-                  <div className="philosophy-icon">📋</div>
-                  <h4>PARA Method</h4>
-                  <p>Organized project management using the PARA system for efficient workflow and knowledge management, this has been an essential part to my discipline and dedication. If you haven't seen it check <a href='https://youtu.be/T6Mfl1OywM8?si=D3zP1VcFwJ2YBSB0'>Tiago Forte's video on organization</a></p>
-                </div>
-                <div className="philosophy-item">
-                  <div className="philosophy-icon">🔄</div>
-                  <h4>Agile & Scrum</h4>
-                  <p>Experienced in agile development methodologies and collaborative team environments.</p>
-                </div>
-              </div>
-            </div>
-            <div className="about-right-column">
-              <div className="philosophy-grid-right">
-                <div className="philosophy-item">
-                  <div className="philosophy-icon">✨</div>
-                  <h4>Clean Code</h4>
-                  <p>Strong advocate for maintainable, readable code that stands the test of time.</p>
-                </div>
-                <div className="philosophy-item">
-                  <div className="philosophy-icon">🧠</div>
-                  <h4>System Thinking</h4>
-                  <p>Deep understanding of computer hardware, system optimization, and performance tuning.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        
-
         {/* Looking Forward Card */}
         <div className="about-card">
           <div className="about-card-header">
