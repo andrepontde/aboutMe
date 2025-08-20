@@ -33,24 +33,29 @@ function Projects() {
     {
       id: 1,
       title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation. Showcases professional experience, projects, and skills with smooth navigation and interactive elements.",
-      longDescription: "This project demonstrates advanced React concepts including hooks, routing, and canvas animations. The Game of Life implementation runs efficiently at 60fps with optimized rendering and responsive design considerations.",
-      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3"],
+      description: "A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation. Deployed on personal VPS using Docker and Nginx for enterprise-level hosting and performance.",
+      longDescription: "This project demonstrates advanced React concepts including hooks, routing, and canvas animations. The Game of Life implementation runs efficiently at 60fps with optimized rendering and responsive design considerations. Deployed using a personal VPS infrastructure with Dockerized Nginx reverse proxy for optimal performance, security, and scalability. The deployment architecture provides enterprise-level hosting capabilities with full control over the server environment.",
+      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3", "Docker", "Nginx", "VPS", "Linux"],
       category: "Frontend Development",
       status: "Live",
       featured: true,
       githubUrl: "https://github.com/andrepontde/aboutMe",
-      liveUrl: null, // This is the current portfolio you're viewing
+      liveUrl: "https://andrepont.dev",
       imageUrl: null, // Add screenshot path when available
       challenges: [
         "Implementing smooth Conway's Game of Life animation",
         "Ensuring responsive design across all devices",
-        "Optimizing canvas performance for mobile browsers"
+        "Optimizing canvas performance for mobile browsers",
+        "Setting up VPS deployment with Docker containerization",
+        "Configuring Nginx reverse proxy for optimal performance"
       ],
       learnings: [
         "Advanced Canvas API manipulation",
         "React performance optimization",
-        "Modern CSS Grid and Flexbox layouts"
+        "Modern CSS Grid and Flexbox layouts",
+        "VPS server management and configuration",
+        "Docker containerization and deployment strategies",
+        "Nginx configuration for production environments"
       ],
       duration: "3 months"
     },

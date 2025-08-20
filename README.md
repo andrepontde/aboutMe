@@ -10,6 +10,17 @@ A modern, responsive portfolio website built with React featuring Conway's Game 
 - Google Analytics integration for visitor tracking
 - SEO optimized with proper meta tags
 
+## Deployment
+
+This portfolio is deployed using a personal VPS (Virtual Private Server) infrastructure with the following stack:
+
+- **VPS Hosting**: Personal cloud server for full control and customization
+- **Nginx**: Dockerized reverse proxy and web server for efficient request handling
+- **Docker**: Containerized deployment for consistent environments and easy scaling
+- **Domain**: Available at [andrepont.dev](https://andrepont.dev)
+
+The deployment architecture leverages Docker containers managed through Nginx for optimal performance, security, and maintainability. This setup allows for seamless deployment of multiple applications and provides enterprise-level hosting capabilities.
+
 ## Analytics Setup
 
 This portfolio includes Google Analytics tracking. To enable it:
@@ -58,33 +69,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
