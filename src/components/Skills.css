@@ -1,0 +1,544 @@
+.skills-container {
+  font-family: 'Disket Mono', 'Consolas', monospace;
+  background: transparent;
+  color: #e0e0e0;
+  height: calc(100vh - 180px);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+/* Override parent container padding for full width */
+#skills {
+  padding: 0 !important;
+}
+
+#skills .horizontal-scroll {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+
+/* IDE Container - Full Section */
+.ide-container {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 0;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+/* IDE Title Bar */
+.ide-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #323233;
+  height: 35px;
+  padding: 0 12px;
+  border-bottom: 1px solid #2d2d30;
+  font-size: 0.8rem;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 0;
+}
+
+.control-btn {
+  width: 45px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #cccccc;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.control-btn.close:hover {
+  background: #e81123;
+  color: white;
+}
+
+.control-btn.minimize:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.control-btn.maximize:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.app-title {
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.file-path {
+  color: #888;
+  font-style: italic;
+}
+
+.title-bar-center {
+  flex: 1;
+  text-align: center;
+}
+
+/* File Tabs */
+.file-tabs {
+  display: flex;
+  background: #2d2d30;
+  border-bottom: 1px solid #333;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.file-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.file-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #2d2d30;
+  border-right: 1px solid #333;
+  cursor: pointer;
+  min-width: 140px;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.file-tab:hover {
+  background: #37373d;
+}
+
+.file-tab.active {
+  background: #1e1e1e;
+  border-bottom: 2px solid #00ff88;
+}
+
+.file-icon {
+  font-size: 0.9rem;
+}
+
+.file-name {
+  color: #cccccc;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.tab-close {
+  color: #888;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.file-tab:hover .tab-close {
+  opacity: 1;
+}
+
+.tab-close:hover {
+  color: #fff;
+}
+
+/* Code Editor */
+.code-editor {
+  flex: 1;
+  overflow: auto;
+  background: #1e1e1e;
+  position: relative;
+}
+
+.editor-content {
+  padding: 0;
+  font-family: 'Disket Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.code-line {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  padding: 0;
+  border-left: 4px solid transparent;
+  position: relative;
+}
+
+.code-line:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-left-color: #333;
+}
+
+.line-number {
+  color: #858585;
+  text-align: right;
+  min-width: 35px;
+  padding: 0 8px 0 16px;
+  user-select: none;
+  font-size: 0.8rem;
+}
+
+.code-text {
+  padding: 0 16px 0 8px;
+  flex: 1;
+  white-space: pre;
+}
+
+/* Syntax Highlighting */
+.code-text.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.code-text.keyword {
+  color: #569cd6;
+  font-weight: 500;
+}
+
+.code-text.string {
+  color: #ce9178;
+}
+
+.code-text.function {
+  color: #dcdcaa;
+}
+
+.code-text.type {
+  color: #4ec9b0;
+}
+
+.code-text.normal {
+  color: #d4d4d4;
+}
+
+/* Terminal Panel */
+.terminal-panel {
+  height: 140px;
+  background: #0c0c0c;
+  border-top: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+  background: #252526;
+  border-bottom: 1px solid #333;
+  font-size: 0.75rem;
+}
+
+.terminal-title {
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.terminal-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-tab {
+  color: #888;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 0;
+}
+
+.terminal-tab.active {
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.terminal-content {
+  flex: 1;
+  padding: 8px 12px;
+  font-family: 'Disket Mono', 'Consolas', monospace;
+  font-size: 0.85rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+.terminal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 0;
+}
+
+.terminal-line {
+  display: flex;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: #00ff88;
+  margin-right: 8px;
+}
+
+.terminal-command {
+  color: #d4d4d4;
+}
+
+.terminal-output {
+  margin: 8px 0;
+  padding-left: 16px;
+}
+
+.terminal-output div {
+  color: #cccccc;
+  margin-bottom: 2px;
+  font-size: 0.8rem;
+}
+
+.terminal-cursor {
+  color: #cccccc;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    height: calc(100vh - 120px);
+    min-height: 500px;
+  }
+  
+  .ide-container {
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+  }
+  
+  .ide-title-bar {
+    height: 35px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+  
+  .control-btn {
+    width: 40px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .window-controls {
+    gap: 0;
+  }
+  
+  .title-bar-left {
+    gap: 10px;
+  }
+  
+  .app-title {
+    font-size: 0.8rem;
+  }
+  
+  .file-path {
+    font-size: 0.7rem;
+  }
+  
+  .file-tab {
+    min-width: 130px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .file-name {
+    font-size: 0.85rem;
+  }
+  
+  .editor-content {
+    font-size: 0.9rem;
+  }
+  
+  .line-number {
+    min-width: 30px;
+    padding: 0 6px 0 12px;
+    font-size: 0.8rem;
+  }
+  
+  .code-text {
+    padding: 0 12px 0 6px;
+    font-size: 0.9rem;
+  }
+  
+  .terminal-panel {
+    height: 130px;
+  }
+  
+  .terminal-content {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+  
+  .terminal-header {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    height: calc(100vh - 100px);
+    min-height: 450px;
+  }
+  
+  .ide-container {
+    margin: 0;
+    border-radius: 6px;
+  }
+  
+  .ide-title-bar {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 0.75rem;
+  }
+  
+  .control-btn {
+    width: 35px;
+    height: 25px;
+    font-size: 12px;
+  }
+  
+  .window-controls {
+    gap: 0;
+  }
+  
+  .title-bar-left {
+    gap: 8px;
+  }
+  
+  .app-title {
+    font-size: 0.7rem;
+  }
+  
+  .file-path {
+    font-size: 0.65rem;
+    display: none; /* Hide on very small screens to save space */
+  }
+  
+  .file-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .file-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .file-tab {
+    min-width: 100px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  
+  .file-name {
+    font-size: 0.8rem;
+  }
+  
+  .tab-close {
+    font-size: 0.9rem;
+  }
+  
+  .editor-content {
+    font-size: 0.85rem;
+  }
+  
+  .line-number {
+    min-width: 28px;
+    padding: 0 5px 0 10px;
+    font-size: 0.75rem;
+  }
+  
+  .code-text {
+    padding: 0 10px 0 5px;
+    font-size: 0.85rem;
+  }
+  
+  .terminal-panel {
+    height: 120px;
+  }
+  
+  .terminal-content {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  
+  .terminal-output div {
+    font-size: 0.75rem;
+  }
+  
+  .terminal-header {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+  
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+  
+  .terminal-tab {
+    padding: 2px 4px;
+    font-size: 0.65rem;
+  }
+  
+  .terminal-line {
+    margin-bottom: 3px;
+  }
+  
+  .terminal-output {
+    margin: 6px 0;
+    padding-left: 12px;
+  }
+}

@@ -1,37 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Projects.css';
+import { trackPortfolioEvent } from '../utils/analytics';
 
 function Projects() {
+  const scrollRef = useRef(null);
+  
+  const scrollProjectsLeft = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth = container.querySelector('.project-card')?.offsetWidth || 0;
+      const gap = 20;
+      container.scrollBy({
+        left: -(cardWidth + gap), // Scroll by 1 card width to shift view
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollProjectsRight = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth = container.querySelector('.project-card')?.offsetWidth || 0;
+      const gap = 20;
+      container.scrollBy({
+        left: cardWidth + gap, // Scroll by 1 card width to shift view
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const projects = [
     {
       id: 1,
       title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation. Showcases professional experience, projects, and skills with smooth navigation and interactive elements.",
-      longDescription: "This project demonstrates advanced React concepts including hooks, routing, and canvas animations. The Game of Life implementation runs efficiently at 60fps with optimized rendering and responsive design considerations.",
-      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3", "React Router"],
+      description: "A modern, responsive portfolio website built with React featuring Conway's Game of Life background animation. Deployed on personal VPS using Docker and Nginx for enterprise-level hosting and performance.",
+      longDescription: "This project demonstrates advanced React concepts including hooks, routing, and canvas animations. The Game of Life implementation runs efficiently at 60fps with optimized rendering and responsive design considerations. Deployed using a personal VPS infrastructure with Dockerized Nginx reverse proxy for optimal performance, security, and scalability. The deployment architecture provides enterprise-level hosting capabilities with full control over the server environment.",
+      technologies: ["React", "JavaScript", "HTML5 Canvas", "CSS3", "Docker", "Nginx", "VPS", "Linux"],
       category: "Frontend Development",
       status: "Live",
       featured: true,
       githubUrl: "https://github.com/andrepontde/aboutMe",
-      liveUrl: "#", // Add your deployed URL here
+      liveUrl: "https://andrepont.dev",
       imageUrl: null, // Add screenshot path when available
       challenges: [
         "Implementing smooth Conway's Game of Life animation",
         "Ensuring responsive design across all devices",
-        "Optimizing canvas performance for mobile browsers"
+        "Optimizing canvas performance for mobile browsers",
+        "Setting up VPS deployment with Docker containerization",
+        "Configuring Nginx reverse proxy for optimal performance"
       ],
       learnings: [
         "Advanced Canvas API manipulation",
         "React performance optimization",
-        "Modern CSS Grid and Flexbox layouts"
+        "Modern CSS Grid and Flexbox layouts",
+        "VPS server management and configuration",
+        "Docker containerization and deployment strategies",
+        "Nginx configuration for production environments"
       ],
-      dateCompleted: "2025-01",
-      duration: "2 weeks"
+      duration: "3 months"
     },
     {
       id: 2,
       title: "SentiMetrics - AI Sentiment Analysis Platform",
-      description: "Hackathon-winning social media sentiment analysis platform built for HackIreland. Uses AI to analyze public sentiment across Twitter and Bluesky for stock trading insights and event analysis.",
+      description: "Social media sentiment analysis platform built for HackIreland. Uses AI to analyze public sentiment across Twitter and Bluesky for stock trading insights and event analysis.",
       longDescription: "A comprehensive platform that aggregates social media data and provides AI-powered sentiment analysis with actionable recommendations. Built during HackIreland hackathon, featuring real-time data processing and conversational AI interface.",
       technologies: ["Next.js", "TypeScript", "Flask", "Python", "OpenAI GPT-3.5", "VADER Sentiment", "Twitter API", "Bluesky API"],
       category: "Full Stack Development",
@@ -50,7 +81,6 @@ function Projects() {
         "AI/ML model implementation",
         "Real-time data processing"
       ],
-      dateCompleted: "2024-11",
       duration: "2 days (Hackathon)"
     },
     {
@@ -75,8 +105,7 @@ function Projects() {
         "Role-based access control implementation",
         "Complex state management in React"
       ],
-      dateCompleted: "2024-12",
-      duration: "6 weeks"
+      duration: "3 months"
     },
     {
       id: 4,
@@ -100,8 +129,7 @@ function Projects() {
         "Algorithm design and optimization",
         "Desktop application development with Java"
       ],
-      dateCompleted: "2024-10",
-      duration: "4 weeks"
+      duration: "2 weeks"
     },
     {
       id: 5,
@@ -134,8 +162,7 @@ function Projects() {
         "Natural language processing: Context-free grammars, attention mechanisms",
         "Optimization: Local search, constraint satisfaction, backtracking"
       ],
-      dateCompleted: "2024-09",
-      duration: "8 weeks"
+      duration: "3 months"
     },
     {
       id: 6,
@@ -159,8 +186,7 @@ function Projects() {
         "Psychology-informed AI development",
         "Multi-stage text processing pipelines"
       ],
-      dateCompleted: "2024-08",
-      duration: "3 weeks"
+      duration: "2 months"
     },
     {
       id: 7,
@@ -184,8 +210,7 @@ function Projects() {
         "Design pattern implementation",
         "Team-based software development"
       ],
-      dateCompleted: "2024-05",
-      duration: "8 weeks"
+      duration: "3 months"
     },
     {
       id: 8,
@@ -196,7 +221,7 @@ function Projects() {
       category: "Full Stack Development",
       status: "In Development",
       featured: false,
-      githubUrl: "https://github.com/yourusername/steadfast",
+      githubUrl: "https://github.com/andrepontde/Steadfast-Java-pilot.git",
       liveUrl: null,
       imageUrl: null,
       challenges: [
@@ -213,21 +238,19 @@ function Projects() {
         "Desktop application development with Electron",
         "Real-time data processing and automation systems"
       ],
-      dateCompleted: "In Progress",
-      duration: "Ongoing"
+      duration: "Ongoing (1+ month)"
     }
   ];
 
-  const categories = [...new Set(projects.map(p => p.category))];
+  const categories = ['Featured', ...new Set(projects.map(p => p.category))];
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [expandedProject, setExpandedProject] = useState(null);
   const [modalProject, setModalProject] = useState(null);
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
+    : selectedCategory === 'Featured'
+    ? projects.filter(p => p.featured)
     : projects.filter(p => p.category === selectedCategory);
-
-  const featuredProjects = projects.filter(p => p.featured);
 
   const openModal = (project) => {
     setModalProject(project);
@@ -248,54 +271,10 @@ function Projects() {
         </p>
       </div>
 
-      {/* Featured Projects */}
-      <section className="featured-section">
-        <h3>Featured Projects</h3>
-        <div className="featured-grid">
-          {featuredProjects.map(project => (
-            <div key={project.id} className="featured-project-card">
-              <div className="project-header">
-                <h4>{project.title}</h4>
-                <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>
-                  {project.status}
-                </span>
-              </div>
-              <p className="project-description">{project.description}</p>
-              <div className="tech-stack">
-                {project.technologies.slice(0, 3).map(tech => (
-                  <span key={tech} className="tech-tag">{tech}</span>
-                ))}
-                {project.technologies.length > 3 && (
-                  <span className="tech-tag more">+{project.technologies.length - 3} more</span>
-                )}
-              </div>
-              <div className="project-links">
-                {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link github">
-                    <span>GitHub</span>
-                  </a>
-                )}
-                {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link live">
-                    <span>Live Demo</span>
-                  </a>
-                )}
-                <button 
-                  className="project-link details"
-                  onClick={() => openModal(project)}
-                >
-                  More Details
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Category Filter */}
       <section className="all-projects-section">
         <div className="filter-section">
-          <h3>All Projects</h3>
+          <h3>Featured Projects</h3>
           <div className="category-filters">
             <button 
               className={selectedCategory === 'All' ? 'active' : ''}
@@ -309,14 +288,24 @@ function Projects() {
                 className={selectedCategory === category ? 'active' : ''}
                 onClick={() => setSelectedCategory(category)}
               >
-                {category} ({projects.filter(p => p.category === category).length})
+                {category} ({category === 'Featured' 
+                  ? projects.filter(p => p.featured).length 
+                  : projects.filter(p => p.category === category).length
+                })
               </button>
             ))}
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="projects-grid">
+        {/* Projects Container with Side Navigation */}
+        <div className="projects-container-wrapper">
+          <button className="projects-nav-button projects-nav-left" onClick={scrollProjectsLeft} aria-label="Previous projects">
+            <span className="nav-icon">{'<'}</span>
+            <span className="nav-label">prev()</span>
+          </button>
+
+          {/* Projects Grid */}
+          <div className="projects-grid" ref={scrollRef}>
           {filteredProjects.map(project => (
             <div key={project.id} className="project-card">
               <div className="project-main">
@@ -330,7 +319,6 @@ function Projects() {
                 
                 <div className="project-meta">
                   <span className="category-tag">{project.category}</span>
-                  <span className="date">{project.dateCompleted}</span>
                   <span className="duration">{project.duration}</span>
                 </div>
 
@@ -342,18 +330,33 @@ function Projects() {
 
                 <div className="project-links">
                   {project.githubUrl && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link github">
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link github"
+                      onClick={() => trackPortfolioEvent.externalLink(`GitHub - ${project.title}`)}
+                    >
                       GitHub
                     </a>
                   )}
                   {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link live">
+                    <a 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="project-link live"
+                      onClick={() => trackPortfolioEvent.externalLink(`Live Demo - ${project.title}`)}
+                    >
                       Live Demo
                     </a>
                   )}
                   <button 
                     className="project-link details"
-                    onClick={() => openModal(project)}
+                    onClick={() => {
+                      openModal(project);
+                      trackPortfolioEvent.projectClick(project.title);
+                    }}
                   >
                     More
                   </button>
@@ -361,6 +364,12 @@ function Projects() {
               </div>
             </div>
           ))}
+          </div>
+
+          <button className="projects-nav-button projects-nav-right" onClick={scrollProjectsRight} aria-label="Next projects">
+            <span className="nav-icon">{'>'}</span>
+            <span className="nav-label">next()</span>
+          </button>
         </div>
       </section>
 
@@ -418,9 +427,6 @@ function Projects() {
                     <strong>Category:</strong> {modalProject.category}
                   </div>
                   <div className="modal-meta-item">
-                    <strong>Completed:</strong> {modalProject.dateCompleted}
-                  </div>
-                  <div className="modal-meta-item">
                     <strong>Duration:</strong> {modalProject.duration}
                   </div>
                 </div>
@@ -442,13 +448,6 @@ function Projects() {
           </div>
         </div>
       )}
-
-      {/* Call to Action */}
-      <section className="cta-section">
-        <h3>Interested in My Work?</h3>
-        <p>I'm always open to discussing new opportunities and collaborations.</p>
-        <a href="#contact" className="cta-button">Get In Touch</a>
-      </section>
     </div>
   );
 }

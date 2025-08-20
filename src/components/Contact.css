@@ -1,0 +1,405 @@
+.contact-container {
+  padding: 20px;
+  font-family: 'Disket Mono', 'Consolas', monospace;
+  background: transparent;
+  color: #e0e0e0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: calc(100vh - 100px);
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.contact-header h2 {
+  color: #00ff88;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.contact-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  flex: 1;
+  align-items: center;
+}
+
+/* Git Bash Terminal Card */
+.terminal-card {
+  background: #0c0c0c;
+  border: 1px solid #333;
+  border-radius: 0;
+  overflow: hidden;
+  height: fit-content;
+  max-height: 400px;
+}
+
+.terminal-header {
+  background: #323233;
+  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d2d30;
+  height: 30px;
+}
+
+.terminal-title {
+  color: #cccccc;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.window-controls {
+  display: flex;
+  gap: 0;
+}
+
+.control-btn {
+  width: 35px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: #cccccc;
+  background: transparent;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.control-btn.close:hover {
+  background: #e81123;
+  color: white;
+}
+
+.terminal-body {
+  padding: 15px;
+  font-family: 'Disket Mono', 'Consolas', monospace;
+  line-height: 1.4;
+  font-size: 0.85rem;
+  background: #0c0c0c;
+  color: #cccccc;
+}
+
+.terminal-line {
+  margin-bottom: 8px;
+  word-wrap: break-word;
+}
+
+.prompt {
+  color: #00ff88;
+  font-weight: normal;
+}
+
+.command-line {
+  color: #ffffff;
+}
+
+.terminal-output {
+  color: #cccccc;
+  margin-bottom: 8px;
+  white-space: pre-line;
+}
+
+.cursor {
+  color: #cccccc;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Contact Methods Grid */
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.method-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  padding: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100px;
+}
+
+.method-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.method-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.method-content h3 {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.method-content p {
+  color: #888;
+  font-size: 0.75rem;
+  margin: 0 0 8px 0;
+}
+
+.method-action {
+  color: #00ff88;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.method-card:hover .method-action {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-grid {
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .contact-methods {
+    gap: 12px;
+  }
+  
+  .method-card {
+    padding: 15px;
+    min-height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px 15px;
+    justify-content: flex-start;
+  }
+  
+  .contact-header {
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  
+  .contact-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  
+  .terminal-card {
+    border-radius: 8px;
+    max-height: 350px;
+    order: 2;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    order: 1;
+  }
+  
+  .method-card {
+    padding: 20px;
+    min-height: 110px;
+    border-radius: 8px;
+  }
+  
+  .method-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .method-content h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .method-content p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .method-action {
+    font-size: 0.75rem;
+  }
+  
+  .terminal-body {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .terminal-header {
+    padding: 8px 12px;
+  }
+  
+  .terminal-title {
+    font-size: 0.75rem;
+  }
+  
+  .control-btn {
+    width: 30px;
+    height: 22px;
+    font-size: 10px;
+  }
+  
+  .terminal-line {
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 15px 10px;
+    justify-content: flex-start;
+  }
+  
+  .contact-header {
+    margin-bottom: 20px;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+  
+  .contact-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .contact-grid {
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .terminal-card {
+    border-radius: 6px;
+    max-height: 320px;
+    order: 2;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 12px;
+    order: 1;
+  }
+  
+  .method-card {
+    padding: 18px 15px;
+    min-height: 90px;
+    border-radius: 6px;
+  }
+  
+  .method-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  
+  .method-content h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .method-content p {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+  
+  .method-action {
+    font-size: 0.7rem;
+  }
+  
+  .terminal-card {
+    border-radius: 6px;
+  }
+  
+  .terminal-body {
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+  
+  .terminal-header {
+    padding: 6px 10px;
+    height: 28px;
+  }
+  
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+  
+  .control-btn {
+    width: 28px;
+    height: 20px;
+    font-size: 9px;
+  }
+  
+  .terminal-line {
+    margin-bottom: 4px;
+  }
+  
+  .terminal-output {
+    margin-bottom: 6px;
+  }
+  
+  .prompt {
+    font-size: 0.75rem;
+  }
+  
+  .command-line {
+    font-size: 0.75rem;
+  }
+  
+  .terminal-output {
+    font-size: 0.7rem;
+  }
+}
