@@ -98,7 +98,7 @@ function Contact() {
 
           <div className="method-card steam-card" onClick={() => {
             trackPortfolioEvent.externalLink('Steam Profile');
-            window.open('https://steamcommunity.com/id/your-steam-id/', '_blank');
+            window.open('https://steamcommunity.com/profiles/76561198237353010', '_blank');
           }}>
             <div className="method-icon">🎮</div>
             <div className="method-content">
@@ -110,7 +110,7 @@ function Contact() {
 
           <div className="method-card hackerrank-card" onClick={() => {
             trackPortfolioEvent.externalLink('HackerRank Profile');
-            window.open('https://www.hackerrank.com/your-profile', '_blank');
+            window.open('https://www.hackerrank.com/andrepontde', '_blank');
           }}>
             <div className="method-icon">🏆</div>
             <div className="method-content">

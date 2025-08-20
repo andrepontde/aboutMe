@@ -74,7 +74,9 @@ function App() {
     const width = canvas.width;
     const height = canvas.height;
 
-    const resolution = 10;
+    // Adjust resolution based on screen size for better mobile performance
+    const isMobile = window.innerWidth <= 768;
+    const resolution = isMobile ? 15 : 10; // Larger cells on mobile for better performance
     const cols = Math.floor(width / resolution);
     const rows = Math.floor(height / resolution);
 
@@ -126,7 +128,8 @@ function App() {
     }
 
     function update() {
-      const fps = 10; // Target 10 updates per second
+      // Reduce frame rate on mobile for better performance
+      const fps = isMobile ? 6 : 10; // Slower on mobile
       const interval = 1000 / fps;
       let lastTime = 0;
 
@@ -144,6 +147,15 @@ function App() {
 
     drawGrid(grid);
     update();
+
+    // Handle window resize for responsive canvas
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (

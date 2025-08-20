@@ -354,6 +354,8 @@
   
   .ide-container {
     margin: 0;
+    border-radius: 8px;
+    border: 1px solid #333;
   }
   
   .ide-title-bar {
@@ -376,9 +378,21 @@
     gap: 10px;
   }
   
+  .app-title {
+    font-size: 0.8rem;
+  }
+  
+  .file-path {
+    font-size: 0.7rem;
+  }
+  
   .file-tab {
     min-width: 130px;
     padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .file-name {
     font-size: 0.85rem;
   }
   
@@ -394,6 +408,7 @@
   
   .code-text {
     padding: 0 12px 0 6px;
+    font-size: 0.9rem;
   }
   
   .terminal-panel {
@@ -407,6 +422,7 @@
   
   .terminal-header {
     padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -418,7 +434,7 @@
   
   .ide-container {
     margin: 0;
-    border-radius: 0;
+    border-radius: 6px;
   }
   
   .ide-title-bar {
@@ -445,10 +461,34 @@
     font-size: 0.7rem;
   }
   
+  .file-path {
+    font-size: 0.65rem;
+    display: none; /* Hide on very small screens to save space */
+  }
+  
+  .file-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .file-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
   .file-tab {
-    min-width: 110px;
+    min-width: 100px;
     padding: 6px 10px;
     font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  
+  .file-name {
+    font-size: 0.8rem;
+  }
+  
+  .tab-close {
+    font-size: 0.9rem;
   }
   
   .editor-content {
@@ -463,6 +503,7 @@
   
   .code-text {
     padding: 0 10px 0 5px;
+    font-size: 0.85rem;
   }
   
   .terminal-panel {
@@ -481,5 +522,23 @@
   .terminal-header {
     padding: 5px 10px;
     font-size: 0.7rem;
+  }
+  
+  .terminal-title {
+    font-size: 0.7rem;
+  }
+  
+  .terminal-tab {
+    padding: 2px 4px;
+    font-size: 0.65rem;
+  }
+  
+  .terminal-line {
+    margin-bottom: 3px;
+  }
+  
+  .terminal-output {
+    margin: 6px 0;
+    padding-left: 12px;
   }
 }
