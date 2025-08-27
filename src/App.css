@@ -31,9 +31,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Optimize for mobile performance */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  /* Remove transforms that can interfere with fixed positioning */
+  position: relative;
 }
 
 canvas {
@@ -183,17 +182,11 @@ canvas {
 .profile-image {
   width: 260px;
   height: 310px;
-  border-radius: 15px;
+  border-radius: 7px;
   object-fit: cover;
   border: 3px solid rgba(0, 255, 136, 0.3);
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
   transition: all 0.3s ease;
-}
-
-.profile-image:hover {
-  border-color: rgba(0, 255, 136, 0.5);
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.3);
-  transform: scale(1.02);
 }
 
 /* Navigation */
@@ -340,7 +333,7 @@ canvas {
   .profile-image {
     width: 220px;
     height: 260px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     margin: 0 auto;
   }
   
