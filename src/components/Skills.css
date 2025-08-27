@@ -12,7 +12,7 @@
 
 /* Override parent container padding for full width */
 #skills {
-  padding: 0 !important;
+  padding: 0;
 }
 
 #skills .horizontal-scroll {

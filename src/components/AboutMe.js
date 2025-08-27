@@ -232,7 +232,7 @@ function AboutMe() {
                 <div className="availability-details">
                   <div className="availability-item">
                     <span className="avail-label">Graduation:</span>
-                    <span className="avail-value">Summer 2027</span>
+                    <span className="avail-value">Summer 2026</span>
                   </div>
                   <div className="availability-item">
                     <span className="avail-label">Location:</span>
