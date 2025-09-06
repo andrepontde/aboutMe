@@ -1,0 +1,449 @@
+.blog-admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #e0e0e0;
+}
+
+/* Authentication Form */
+.auth-form {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: rgba(30, 30, 30, 0.9);
+  border: 2px solid #c2fe0c;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.auth-form h2 {
+  font-family: 'Disket-Mono-Bold', monospace;
+  color: #c2fe0c;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(194, 254, 12, 0.3);
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.auth-form label {
+  font-family: 'Disket-Mono-Regular', monospace;
+  color: #e0e0e0;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-family: 'Disket-Mono-Regular', monospace;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #c2fe0c;
+  box-shadow: 0 0 10px rgba(194, 254, 12, 0.3);
+}
+
+.auth-btn {
+  background: #c2fe0c;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Bold', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.auth-btn:hover {
+  background: #a8d60a;
+  box-shadow: 0 0 15px rgba(194, 254, 12, 0.5);
+}
+
+/* Admin Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-header h2 {
+  font-family: 'Disket-Mono-Bold', monospace;
+  font-size: 2.5rem;
+  color: #c2fe0c;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(194, 254, 12, 0.3);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.new-post-btn, .export-btn, .import-btn {
+  background: transparent;
+  border: 2px solid #c2fe0c;
+  color: #c2fe0c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Regular', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.new-post-btn:hover, .export-btn:hover, .import-btn:hover {
+  background: #c2fe0c;
+  color: #000;
+  box-shadow: 0 0 15px rgba(194, 254, 12, 0.5);
+}
+
+.import-btn {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Post Form Overlay */
+.post-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.post-form {
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid #c2fe0c;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-header h3 {
+  font-family: 'Disket-Mono-Bold', monospace;
+  color: #c2fe0c;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: none;
+  color: #c2fe0c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancel-btn:hover {
+  color: #ff4444;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Disket-Mono-Regular', monospace;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-family: 'Disket-Mono-Regular', monospace;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c2fe0c;
+  box-shadow: 0 0 10px rgba(194, 254, 12, 0.3);
+}
+
+.form-group textarea {
+  min-height: 300px;
+  line-height: 1.6;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.cancel-form-btn {
+  background: transparent;
+  border: 2px solid #666;
+  color: #666;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Regular', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-form-btn:hover {
+  border-color: #999;
+  color: #999;
+}
+
+.save-btn {
+  background: #c2fe0c;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Bold', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background: #a8d60a;
+  box-shadow: 0 0 15px rgba(194, 254, 12, 0.5);
+}
+
+/* Posts List */
+.posts-list h3 {
+  font-family: 'Disket-Mono-Bold', monospace;
+  color: #c2fe0c;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+  color: #a0a0a0;
+  font-family: 'Disket-Mono-Regular', monospace;
+  font-size: 1.1rem;
+}
+
+.posts-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-row {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.post-row:hover {
+  border-color: #c2fe0c;
+  box-shadow: 0 5px 20px rgba(194, 254, 12, 0.1);
+}
+
+.post-info {
+  flex: 1;
+}
+
+.post-info h4 {
+  font-family: 'Disket-Mono-Bold', monospace;
+  color: #c2fe0c;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-meta span {
+  font-family: 'Disket-Mono-Regular', monospace;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(194, 254, 12, 0.1);
+  border: 1px solid rgba(194, 254, 12, 0.3);
+  color: #c2fe0c;
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  font-family: 'Disket-Mono-Regular', monospace;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.post-preview {
+  font-family: 'Disket-Mono-Regular', monospace;
+  color: #ccc;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.post-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  background: transparent;
+  border: 2px solid #c2fe0c;
+  color: #c2fe0c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Regular', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.edit-btn:hover {
+  background: #c2fe0c;
+  color: #000;
+  box-shadow: 0 0 15px rgba(194, 254, 12, 0.5);
+}
+
+.delete-btn {
+  background: transparent;
+  border: 2px solid #ff4444;
+  color: #ff4444;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: 'Disket-Mono-Regular', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background: #ff4444;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-admin-container {
+    padding: 1rem;
+  }
+  
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-header h2 {
+    font-size: 2rem;
+  }
+  
+  .admin-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .post-form {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .post-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .post-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-admin-container {
+    padding: 0.5rem;
+  }
+  
+  .post-form {
+    padding: 1rem;
+  }
+  
+  .admin-actions {
+    flex-direction: column;
+  }
+  
+  .admin-actions button,
+  .admin-actions .import-btn {
+    width: 100%;
+  }
+}
