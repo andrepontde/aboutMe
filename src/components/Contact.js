@@ -126,7 +126,7 @@ function Contact() {
               <h3>Resume</h3>
               <p>CV Document</p>
               <a 
-                href="/AndrePont_CV_WebPage.pdf"
+                href="/Andre_Pont_CV_WebPage.pdf"
                 download 
                 className="method-action"
                 onClick={() => trackPortfolioEvent.resumeDownload()}
