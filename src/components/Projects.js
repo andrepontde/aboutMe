@@ -239,6 +239,64 @@ function Projects() {
         "Real-time data processing and automation systems"
       ],
       duration: "Ongoing (1+ month)"
+    },
+    {
+      id: 9,
+      title: "My Own Git",
+      description: "Custom implementation of Git version control system from scratch. A deep dive into the internals of version control, demonstrating low-level understanding of Git's architecture and data structures.",
+      longDescription: "A from-scratch implementation of core Git functionality, exploring how version control systems work under the hood. This project demonstrates understanding of file systems, hashing algorithms, tree structures, and the fundamental concepts that power modern version control.",
+      technologies: ["Python", "File Systems", "SHA-1", "Data Structures", "Version Control"],
+      category: "System Programming",
+      status: "In Development",
+      featured: false,
+      githubUrl: "https://github.com/andrepontde/My-own-git",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Implementing Git's object model from scratch",
+        "Understanding and recreating blob, tree, and commit objects",
+        "Managing file system operations efficiently",
+        "Implementing hashing and content addressing"
+      ],
+      learnings: [
+        "Deep understanding of Git internals",
+        "File system and low-level programming",
+        "Hash-based data structures",
+        "Version control system architecture"
+      ],
+      duration: "In Progress"
+    },
+    {
+      id: 10,
+      title: "Arka Inventory - Retail Management System",
+      description: "Enterprise-grade retail management system built with Spring Boot. Features JWT authentication, role-based access control, multi-store inventory tracking, real-time sales processing, and comprehensive API for mobile app integration.",
+      longDescription: "A comprehensive retail management platform designed for businesses managing multiple store locations. Implements JWT-based authentication with three-tier role system (Corporate Admin, Store Manager, Sales Associate), real-time inventory tracking with low stock alerts, complete sales transaction processing with revenue analytics, and stock transfer capabilities between locations. Built with Spring Boot 3.5.3 and Java 21, featuring PostgreSQL database, Docker containerization, and a modern web interface. Includes public API endpoints for mobile app discovery and CORS-enabled architecture for cross-platform development.",
+      technologies: ["Spring Boot", "Java 21", "PostgreSQL", "JWT", "Spring Security", "JPA/Hibernate", "Docker", "Docker Compose", "Maven", "HTML5", "CSS3", "JavaScript", "RESTful API"],
+      category: "Full Stack Development",
+      status: "In Development",
+      featured: false,
+      githubUrl: "https://github.com/andrepontde/Arka-Inventory",
+      liveUrl: null,
+      imageUrl: null,
+      challenges: [
+        "Implementing secure JWT authentication and role-based access control",
+        "Building real-time multi-store inventory synchronization",
+        "Designing scalable database schema for complex retail operations",
+        "Creating CORS-enabled API architecture for mobile integration",
+        "Implementing stock reservation and transfer logic across locations",
+        "Setting up complete Docker containerization for easy deployment"
+      ],
+      learnings: [
+        "Advanced Spring Boot and Spring Security implementation",
+        "JWT authentication and authorization patterns",
+        "Enterprise-level database design with PostgreSQL",
+        "Docker and Docker Compose orchestration",
+        "RESTful API design for mobile consumption",
+        "Role-based access control implementation",
+        "Real-time inventory management algorithms",
+        "Full-stack enterprise application architecture"
+      ],
+      duration: "In Progress"
     }
   ];
 
