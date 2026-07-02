@@ -1,5 +1,6 @@
 services:
   portfolio:
+    container_name: portfolio
     build: .
     restart: unless-stopped
     networks:
