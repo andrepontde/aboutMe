@@ -42,3 +42,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 ANALYTICS_SETUP.md
+
+# Remove when updates needed
+docker-compose.yaml
