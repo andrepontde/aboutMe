@@ -179,12 +179,12 @@ function App() {
                     <p className="tagline">Full-Stack Developer & Computing Student</p>
                     <p className="description">
                       CS student motivated by a passion for technology and fear of unempployment.
-                      Retired procastinator and retail assistant @ <a href="https://www.rains.com" className="company-link" target="_blank" rel="noopener noreferrer">RAINS Dublin</a>
+                      Retired procastinator and Software Engineer Intern @ <a href="https://www.ibm.com" className="company-link" target="_blank" rel="noopener noreferrer">IBM Ireland</a>
                     </p>
                     <div className="quick-info">
                       <span>📍 Dublin, Ireland</span>
                       <span>🎓 BSc Computer Science</span>
-                      <span>💼 3+ Years Experience</span>
+                      <span>💼 4+ Years Experience</span>
                     </div>
                   </div>
                   <div className="profile-section">
