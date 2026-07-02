@@ -1,0 +1,10 @@
+services:
+  portfolio:
+    build: .
+    restart: unless-stopped
+    networks:
+      - your-network
+
+networks:
+  your-network:
+    external: true
