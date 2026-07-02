@@ -50,14 +50,14 @@ function AboutMe() {
             <div className="about-card-content-two-column">
               <div className="about-left-column">
                 <p>
-            I'm André Pont, a 22-year-old Computer Science student at National College of Ireland, 
-            currently in my third year. Originally from México, but I chose to study abroad to escape latin america.
+            I'm André Pont, a 23-year-old Computer Science student at National College of Ireland, 
+            currently in my fourth year. Originally from México, but I chose to study abroad to escape latin america.
                 </p>
                 <p>
             My passion is creating software solutions that make a meaningful impact on communities and businesses.
                 </p>
                 <p>
-            With over 4 years of hands-on experience in software development, I’ve built a strong foundation in computer science fundamentals, contributed to diverse projects from web apps to automation tools, and am now diving deep into AI development and model training to expand my expertise even further.
+            With over 5 years of hands-on experience in software development, I’ve built a strong foundation in computer science fundamentals, contributed to diverse projects from web apps to automation tools, and am now diving deep into AI integrations to expand my expertise even further.
                 </p>
 
               </div>
@@ -66,7 +66,7 @@ function AboutMe() {
             <h4>Quick Stats</h4>
             <div className="stat-item">
               <span className="stat-label">Age:</span>
-              <span className="stat-value">22</span>
+              <span className="stat-value">23</span>
             </div>
             <div className="stat-item">
               <span className="stat-label">Years Coding:</span>
@@ -232,7 +232,7 @@ function AboutMe() {
                 <div className="availability-details">
                   <div className="availability-item">
                     <span className="avail-label">Graduation:</span>
-                    <span className="avail-value">Summer 2026</span>
+                    <span className="avail-value">Summer 2027</span>
                   </div>
                   <div className="availability-item">
                     <span className="avail-label">Location:</span>
@@ -240,7 +240,7 @@ function AboutMe() {
                   </div>
                   <div className="availability-item">
                     <span className="avail-label">Type:</span>
-                    <span className="avail-value">Full-time / Internship</span>
+                    <span className="avail-value">Full-time / Graduate role</span>
                   </div>
                 </div>
               </div>

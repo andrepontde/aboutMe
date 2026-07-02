@@ -15,17 +15,22 @@ function Skills() {
         { line: 5, code: '    level: "expert",', type: 'string' },
         { line: 6, code: '    use: "System-level applications"', type: 'string' },
         { line: 7, code: '  },', type: 'normal' },
-        { line: 8, code: '  python: {', type: 'normal' },
-        { line: 9, code: '    experience: "4+ years",', type: 'string' },
-        { line: 10, code: '    level: "expert",', type: 'string' },
-        { line: 11, code: '    use: "AI & data processing"', type: 'string' },
+        { line: 8, code: '  go: {', type: 'normal' },
+        { line: 9, code: '    experience: "1 year",', type: 'string' },
+        { line: 10, code: '    level: "advanced",', type: 'string' },
+        { line: 11, code: '    use: "Backend services"', type: 'string' },
         { line: 12, code: '  },', type: 'normal' },
-        { line: 13, code: '  javascript: {', type: 'normal' },
-        { line: 14, code: '    experience: "3+ years",', type: 'string' },
-        { line: 15, code: '    level: "advanced",', type: 'string' },
-        { line: 16, code: '    use: "Web development"', type: 'string' },
-        { line: 17, code: '  }', type: 'normal' },
-        { line: 18, code: '};', type: 'keyword' },
+        { line: 13, code: '  python: {', type: 'normal' },
+        { line: 14, code: '    experience: "4+ years",', type: 'string' },
+        { line: 15, code: '    level: "expert",', type: 'string' },
+        { line: 16, code: '    use: "AI & data processing"', type: 'string' },
+        { line: 17, code: '  },', type: 'normal' },
+        { line: 18, code: '  javascript: {', type: 'normal' },
+        { line: 19, code: '    experience: "3+ years",', type: 'string' },
+        { line: 20, code: '    level: "advanced",', type: 'string' },
+        { line: 21, code: '    use: "Web development"', type: 'string' },
+        { line: 22, code: '  }', type: 'normal' },
+        { line: 23, code: '};', type: 'keyword' },
       ]
     },
     'frameworks.tsx': {
@@ -81,6 +86,7 @@ function Skills() {
         { line: 22, code: '        ]', type: 'normal' },
       ]
     },
+    // RE-DO this entire section
     'systems.sh': {
       icon: '⚫',
       content: [
